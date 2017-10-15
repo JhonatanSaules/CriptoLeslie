@@ -1,0 +1,5 @@
+*.pyc
+__pycache__
+myenv
+owncloud.db
+.DS_Store
