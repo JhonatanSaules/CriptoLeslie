@@ -68,4 +68,4 @@ class RegisterView(FormView):
 
 
 class RegisterSuccessView(TemplateView):
-    template_name = 'nube/success.html'
+    template_name = 'nube/succes.html'
