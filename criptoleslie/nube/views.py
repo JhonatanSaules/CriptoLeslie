@@ -72,3 +72,6 @@ class RegisterSuccessView(TemplateView):
 
 class IndexView(TemplateView):
     template_name = 'nube/index.html'
+
+class ProfileView(TemplateView):
+    template_name = 'nube/profile.html'
