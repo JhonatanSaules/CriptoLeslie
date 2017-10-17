@@ -1,7 +1,7 @@
 {% load i18n staticfiles %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,69 +10,60 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-theme.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
 
-  </head>
-  <body>
-        <div class="row" id="main-content">
-          <div class="col-sm-2" id="menu-bg">
+</head>
+<body>
+<div class="row" id="main-content">
+    <div class="col-sm-2" id="menu-bg">
 
-          </div>
-          <div class="col-sm-2" id="side-menu">
-            <div class="text-center" id="image-container">
-              <img src="{% static 'imgs/logo.jpg' %}" class="img-circle" id="logo">
-            </div>
-
-
-              <ul class="nav nav-pills nav-stacked" id="menu-list">
-                <li class="active"><a href="{% url 'index' %}"><span class="glyphicon glyphicon-home"></span>&nbsp; Home</a></li>
-                <li><a href="{% url 'index' %}"><span class="glyphicon glyphicon-edit"></span>&nbsp; Descargar</a></li>
-                <li><a href="{% url 'index' %}"><span class="glyphicon glyphicon-ok"></span>&nbsp; Subir</a></li>
-                <li><a href="{% url 'index' %}"><span class="glyphicon glyphicon-hourglass"></span>&nbsp; Eliminar</a></li>
-                <li><a href="{% url 'index' %}"><span class="glyphicon glyphicon-apple"></span>&nbsp; Con&oacute;cenos</a></li>
-                <li><a href="{% url 'index' %}"><span class="glyphicon glyphicon-hourglass"></span>&nbsp; Cerrar Sesi&oacute;n</a></li
-            </ul>
-
-            <div id="menu-filler">
-
-            </div>
-          </div>
-          <div class="col-sm-10 col-sm-offset-2" id="main-side">
-            <div class="row" id="header">
-              <div class="pull-right" id="user-name-container">
-                <div id="user-name">Diana Leslie Gonzalez Olivier &nbsp;<span class="glyphicon glyphicon-education"></span></div>
-              </div>
-            </div>
-
-            <div class="row" id="content-container">
-              <div class="page-header">
-                <h2>Bienvenida</h2>
-              </div>
-
-
-
-              <div class="jumbotron content">
-                  <!-- <h1>¡Bienvenido Alumno!</h1> 
-                  <img src="imgs/imagen-de-cosas.jpg" class="img"> -->
-                  <p>Lista de los archivos que tiene almacenados</p>
-
-
-
-              </div>
-            </div>
-
-
-
-            <div class="row" id="footer">
-              <div class="col-sm-5" id="dir">
-                 Av. Juan de Dios Bátiz esq. Av. Miguel Othón de Mendizábal, Col. Lindavista. Demarcación Territorial, Gustavo A. Madero. Ciudad de México. C. P. 07738.
-              </div>
-              <div class="col-sm-5 col-sm-offset-2" id="year">
-                <span class="pull-right"><span class="glyphicon glyphicon-registration-mark"></span>&nbsp;2017</span>
-              </div>
-            </div>
-          </div>
+    </div>
+    <div class="col-sm-2" id="side-menu">
+        <div class="text-center" id="image-container">
+            <img src="{% static 'imgs/logo.jpg' %}" class="img-circle" id="logo">
         </div>
 
-    <script type="text/javascript" src="{% static 'js/jquery-1.11.3.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
-  </body>
+
+        <ul class="nav nav-pills nav-stacked" id="menu-list">
+            <li class="active"><a href="{% url 'profile' %}"><span class="glyphicon glyphicon-home"></span>&nbsp; Home</a></li>
+            <li><a href="{% url 'index' %}"><span class="glyphicon glyphicon-edit"></span>&nbsp; Descargar</a></li>
+            <li><a href="{% url 'index' %}"><span class="glyphicon glyphicon-ok"></span>&nbsp; Subir</a></li>
+            <li><a href="{% url 'index' %}"><span class="glyphicon glyphicon-hourglass"></span>&nbsp; Eliminar</a></li>
+            <li><a href="{% url 'logout' %}"><span class="glyphicon glyphicon-hourglass"></span>&nbsp;{% trans "Cerrar Sesi&oacute;n " %} </a></li>
+        </ul>
+
+        <div id="menu-filler">
+
+        </div>
+    </div>
+    <div class="col-sm-10 col-sm-offset-2" id="main-side">
+        <div class="row" id="header">
+            <div class="pull-right" id="user-name-container">
+                <div id="id_username"><span class="glyphicon glyphicon-education"></span></div>
+            </div>
+        </div>
+
+        <div class="row" id="content-container">
+            <div class="page-header">
+                <h2>Bienvenida</h2>
+            </div>
+            <div class="jumbotron content">
+                <!-- <h1>¡Bienvenido Alumno!</h1>
+                <img src="imgs/imagen-de-cosas.jpg" class="img"> -->
+                <p>Lista de los archivos que tiene almacenados</p>
+            </div>
+        </div>
+
+        <div class="row" id="footer">
+            <div class="col-sm-5" id="dir">
+                Av. Juan de Dios Bátiz esq. Av. Miguel Othón de Mendizábal, Col. Lindavista. Demarcación Territorial, Gustavo A. Madero. Ciudad de México. C. P. 07738.
+            </div>
+            <div class="col-sm-5 col-sm-offset-2" id="year">
+                <span class="pull-right"><span class="glyphicon glyphicon-registration-mark"></span>&nbsp;2017</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="{% static 'js/jquery-1.11.3.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
 </html>

@@ -23,14 +23,20 @@ class LoginForm(AuthenticationForm):
 
 class RegistrationForm(forms.Form):
 
+    # name = forms.RegexField(regex=r'^\w+$', widget=forms.TextInput(
+    #     attrs={'maxlength': 30, 'class': 'form-control', 'placeholder': _("Nombre")}))
+    # apellido1 = forms.RegexField(regex=r'^\w+$', widget=forms.TextInput(
+    #     attrs={'maxlength': 30, 'class': 'form-control', 'placeholder': _("Primer Apellido")}))
+    # apellido2 = forms.RegexField(regex=r'^\w+$', widget=forms.TextInput(
+    #     attrs={'maxlength': 30, 'class': 'form-control', 'placeholder': _("Segundo Apellido")}))
     username = forms.RegexField(regex=r'^\w+$', widget=forms.TextInput(
-        attrs={'maxlength': 30, 'class': 'form-control', 'placeholder': _("Username")}))
+        attrs={'maxlength': 30, 'class': 'form-control', 'placeholder': _("Nombre de usuario")}))
     email = forms.EmailField(widget=forms.TextInput(
-        attrs={'maxlength': 60, 'class': 'form-control', 'placeholder': _("Email Address")}))
+        attrs={'maxlength': 60, 'class': 'form-control', 'placeholder': _("Correo electronico")}))
     password1 = forms.CharField(widget=forms.PasswordInput(
-        attrs={'maxlength': 30, 'class': 'form-control', 'placeholder': _("Password")}))
+        attrs={'maxlength': 30, 'class': 'form-control', 'placeholder': _("Contrasena")}))
     password2 = forms.CharField(widget=forms.PasswordInput(
-        attrs={'maxlength': 30, 'class': 'form-control', 'placeholder': _("Confirm your password")}))
+        attrs={'maxlength': 30, 'class': 'form-control', 'placeholder': _("Confirma tu contrasena")}))
 
     def __init__(self, *args, **kwargs):
         super(RegistrationForm, self).__init__(*args, **kwargs)
@@ -44,9 +50,9 @@ class RegistrationForm(forms.Form):
     def clean_username(self):
         try:
             user = User.objects.get(
-                username__iexact=self.cleaned_data['username'])
+                username__iexact=self.cleaned_data["username"])
         except User.DoesNotExist:
-            return self.cleaned_data['username']
+            return self.cleaned_data["username"]
         raise forms.ValidationError(_("Account already exists."))
 
     def clean(self):
