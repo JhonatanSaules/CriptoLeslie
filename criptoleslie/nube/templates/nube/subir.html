@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Profile</title>
+    <title>Subir Archivo</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-theme.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
@@ -43,15 +43,14 @@
 
         <div class="row" id="content-container">
             <div class="page-header">
-                <h2>Bienvenida</h2>
+                <h2></h2>
             </div>
             <div class="jumbotron content">
-                <!-- <h1>¡Bienvenido Alumno!</h1>
-                <img src="imgs/imagen-de-cosas.jpg" class="img"> -->
-                <p>Lista de los archivos que tiene almacenados</p>
-
-
-
+                <form name="formulario" method="post" action="http://pagina.com/send.php"
+                      enctype="multipart/form-data"> <!-- ¡No olvides el enctype! -->
+                    <!-- Campo de selección de archivo -->
+                    <input type="file" name="adjunto" {% comment %}accept=".pdf,.jpg,.png"{% endcomment %} multiple>
+                </form>
             </div>
         </div>
 
