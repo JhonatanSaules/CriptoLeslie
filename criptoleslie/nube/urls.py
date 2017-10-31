@@ -4,8 +4,10 @@ from . import views
 urlpatterns = [
         # index
         url(r'^index/$', views.IndexView.as_view(), name='index'),
-        url(r'^profile/$', views.ProfileView.as_view(), name='profile'),
-        url(r'^subir/$', views.SubirView.as_view(), name='subir'),
+        url(r'^profile/$', views.lista, name='profile'),
+        #url(r'^profile/$', views.ProfileView.as_view(), name='profile'),
+        #url(r'^subir/$', views.SubirView.as_view(), name='uploads'),
+        url(r'^uploads/', views.upload_file, name="uploads"),
         # session
         url(r'^login/$', views.LoginView.as_view(), name='login'),
         url(r'^logout/$', views.LogoutView.as_view(), name='logout'),

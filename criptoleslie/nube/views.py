@@ -1,6 +1,8 @@
+import user
 from django.contrib.auth import login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from django.shortcuts import render, redirect
 from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect, request
 from django.utils.decorators import method_decorator
@@ -9,8 +11,12 @@ from django.views.generic import TemplateView
 from django.views.generic.base import View
 from django.views.generic.edit import FormView
 from nube.rsagen import *
+from nube.models import Document
+from os import walk
+from glob import glob
+from nube.Cliente import *
 from criptoleslie import config
-from nube.forms import RegistrationForm, LoginForm
+from nube.forms import RegistrationForm, LoginForm, UploadForm
 
 class LoginView(FormView):
     template_name = 'nube/login.html'
@@ -77,12 +83,53 @@ class RegisterSuccessView(TemplateView):
 class IndexView(TemplateView):
     template_name = 'nube/index.html'
 
-class ProfileView(TemplateView):
-    template_name = 'nube/profile.html'
+#class ProfileView(TemplateView):
 
-class SubirView(TemplateView):
-    template_name = 'nube/subir.html'
-    #main()
+    # def ls(expr='*.*'):
+    #     return glob(expr)
+    # print(ls('/home/jhonatan/PycharmProjects/CriptoLeslie/criptoleslie/Cifrados/*'))
+    # ls('/home/jhonatan/PycharmProjects/CriptoLeslie/criptoleslie/Cifrados/*')
+    # template_name = ''
+
+def lista(request):
+    path = '/home/jhonatan/PycharmProjects/CriptoLeslie/criptoleslie/Cifrados/'
+    # Lista vacia para incluir los ficheros
+    lstFiles = []
+
+    # Lista con todos los ficheros del directorio:
+    lstDir = os.walk(path)  # os.walk()Lista directorios y ficheros
+
+    # Crea una lista de los ficheros jpg que existen en el directorio y los incluye a la lista.
+    for root, dirs, files in lstDir:
+        for fichero in files:
+            (nombreFichero, extension) = os.path.splitext(fichero)
+            #if (extension == ".jpg"):
+            lstFiles.append(nombreFichero + extension)
+            # print (nombreFichero+extension)
+
+    print(lstFiles)
+    print ('LISTADO FINALIZADO')
+    return render(request, 'nube/profile.html', {'lstFiles': lstFiles})
+
+
+#class SubirView(TemplateView):
+    #template_name = 'nube/upload.html'
+
+def upload_file(request):
+    if request.method == 'POST':
+        form = UploadForm(request.POST, request.FILES)
+        if form.is_valid():
+            newdoc = Document(filename=request.POST['filename'], docfile=request.FILES['docfile'])
+            newdoc.save(form)
+            subir_arch(newdoc.filename)
+            return redirect("profile")
+    else:
+        form = UploadForm()
+    # tambien se puede utilizar render_to_response
+    # return render_to_response('upload.html', {'form': form}, context_instance = RequestContext(request))
+    return render(request, 'nube/upload.html', {'form': form})
+
+
 
 
 

@@ -25,7 +25,7 @@
         <ul class="nav nav-pills nav-stacked" id="menu-list">
             <li class="active"><a href="{% url 'profile' %}"><span class="glyphicon glyphicon-home"></span>&nbsp; Home</a></li>
             <li><a href="{% url 'index' %}"><span class="glyphicon glyphicon-edit"></span>&nbsp; Descargar</a></li>
-            <li><a href="{% url 'subir' %}"><span class="glyphicon glyphicon-ok"></span>&nbsp; Subir</a></li>
+            <li><a href="{% url 'uploads' %}"><span class="glyphicon glyphicon-ok"></span>&nbsp; Subir</a></li>
             <li><a href="{% url 'index' %}"><span class="glyphicon glyphicon-hourglass"></span>&nbsp; Eliminar</a></li>
             <li><a href="{% url 'logout' %}"><span class="glyphicon glyphicon-hourglass"></span>&nbsp;{% trans "Cerrar Sesi&oacute;n " %} </a></li>
         </ul>
@@ -46,10 +46,9 @@
                 <h2></h2>
             </div>
             <div class="jumbotron content">
-                <form name="formulario" method="post" action="http://pagina.com/send.php"
-                      enctype="multipart/form-data"> <!-- ¡No olvides el enctype! -->
-                    <!-- Campo de selección de archivo -->
-                    <input type="file" name="adjunto" {% comment %}accept=".pdf,.jpg,.png"{% endcomment %} multiple>
+                <form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit" value="Submit">
                 </form>
             </div>
         </div>

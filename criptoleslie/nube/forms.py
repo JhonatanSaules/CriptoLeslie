@@ -60,3 +60,11 @@ class RegistrationForm(forms.Form):
             if self.cleaned_data['password1'] != self.cleaned_data['password2']:
                 raise forms.ValidationError(_("Passwords don't match."))
         return self.cleaned_data
+
+
+
+class UploadForm(forms.Form):
+ filename = forms.CharField(max_length=100)
+ docfile = forms.FileField(
+        label='Selecciona un archivo'
+    )
