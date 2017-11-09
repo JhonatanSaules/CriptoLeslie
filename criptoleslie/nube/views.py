@@ -1,4 +1,5 @@
 import user
+import os
 from django.contrib.auth import login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
@@ -14,6 +15,7 @@ from nube.rsagen import *
 from nube.models import Document
 from os import walk
 from glob import glob
+from os import walk
 from nube.Cliente import *
 from criptoleslie import config
 from nube.forms import RegistrationForm, LoginForm, UploadForm
@@ -28,6 +30,12 @@ class LoginView(FormView):
 
     def form_valid(self, form):
         login(self.request, form.get_user())
+        nom_user=""
+        nom_user = form.get_user()
+        print nom_user
+        f_user = open("llaves_clientes/user.txt", "w")
+        f_user.write(str(nom_user))
+        f_user.close()
         return super(LoginView, self).form_valid(form)
 
     def get_success_url(self):
@@ -35,6 +43,7 @@ class LoginView(FormView):
             return config.LOGIN_REDIRECT_URL
         except:
             return "/profile/"
+
 
 
 class LogoutView(View):
@@ -52,13 +61,6 @@ class RegisterView(FormView):
     template_name = 'nube/register.html'
     form_class = RegistrationForm
 
-    # @method_decorator(csrf_protect)
-    # def dispatch(self, request, *args, **kwargs):
-    #     if request.user.is_authenticated():
-    #         return HttpResponseRedirect(config.INDEX_REDIRECT_URL)
-    #     else:
-    #         return super(RegisterView, self).dispatch(request, *args, **kwargs)
-
     def form_valid(self, form):
 
         user = User.objects.create_user(
@@ -70,7 +72,9 @@ class RegisterView(FormView):
             email=form.cleaned_data['email']
         )
         gen_rsa(user.username)
+        path = '/home/jhonatan/PycharmProjects/CriptoLeslie/criptoleslie/Cifrados/'+user.username
 
+        os.mkdir(path)
         return super(RegisterView, self).form_valid(form)
 
     def get_success_url(self):
@@ -92,36 +96,33 @@ class IndexView(TemplateView):
     # template_name = ''
 
 def lista(request):
-    path = '/home/jhonatan/PycharmProjects/CriptoLeslie/criptoleslie/Cifrados/'
+    nom_user = open("llaves_clientes/user.txt", "r").read()
+    path = '/home/jhonatan/PycharmProjects/CriptoLeslie/criptoleslie/Cifrados/'+nom_user
     # Lista vacia para incluir los ficheros
     lstFiles = []
 
     # Lista con todos los ficheros del directorio:
     lstDir = os.walk(path)  # os.walk()Lista directorios y ficheros
 
-    # Crea una lista de los ficheros jpg que existen en el directorio y los incluye a la lista.
     for root, dirs, files in lstDir:
         for fichero in files:
             (nombreFichero, extension) = os.path.splitext(fichero)
-            #if (extension == ".jpg"):
             lstFiles.append(nombreFichero + extension)
-            # print (nombreFichero+extension)
 
     print(lstFiles)
     print ('LISTADO FINALIZADO')
     return render(request, 'nube/profile.html', {'lstFiles': lstFiles})
 
 
-#class SubirView(TemplateView):
-    #template_name = 'nube/upload.html'
-
 def upload_file(request):
+
     if request.method == 'POST':
         form = UploadForm(request.POST, request.FILES)
         if form.is_valid():
             newdoc = Document(filename=request.POST['filename'], docfile=request.FILES['docfile'])
             newdoc.save(form)
-            subir_arch(newdoc.filename)
+            nom_user = open("llaves_clientes/user.txt", "r").read()
+            subir_arch(newdoc.filename,str(nom_user))
             return redirect("profile")
     else:
         form = UploadForm()
