@@ -96,8 +96,8 @@ class RegisterView(FormView):
         if is_valid:
             print("El email es correcto")
             user = User.objects.create_user(
-                # name=form.cleaned_data["name"],
-                # apellido1=form.cleaned_data["apellido1"],
+                #firstname=form.cleaned_data["firstname"],
+                #lastname=form.cleaned_data["lastname"],
                 # apellido2=form.cleaned_data["apellido2"],
                 username=form.cleaned_data["username"],
                 password=form.cleaned_data['password1'],

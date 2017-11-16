@@ -21,9 +21,9 @@ class LoginForm(AuthenticationForm):
 
 class RegistrationForm(forms.Form):
 
-    # name = forms.RegexField(regex=r'^\w+$', widget=forms.TextInput(
+    #firstname = forms.RegexField(regex=r'^\w+$', widget=forms.TextInput(
     #     attrs={'maxlength': 30, 'class': 'form-control', 'placeholder': _("Nombre")}))
-    # apellido1 = forms.RegexField(regex=r'^\w+$', widget=forms.TextInput(
+    #lastname = forms.RegexField(regex=r'^\w+$', widget=forms.TextInput(
     #     attrs={'maxlength': 30, 'class': 'form-control', 'placeholder': _("Primer Apellido")}))
     # apellido2 = forms.RegexField(regex=r'^\w+$', widget=forms.TextInput(
     #     attrs={'maxlength': 30, 'class': 'form-control', 'placeholder': _("Segundo Apellido")}))

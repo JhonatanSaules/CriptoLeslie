@@ -2,24 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4bf220dd-2e92-46d7-80e8-7644e3871390" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nube/migrations/0003_cipher.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nube/migrations/0004_hashes.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Cifrados/Jhonatan/c2_gris.jpg.aes" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Cifrados/Jhonatan/c2_rojo.jpg.aes" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Cifrados/Jhonatan/gris.jpg.aes" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Cifrados/Jhonatan/rojo.jpg.aes" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Cifrados/Leslie/c2_ftp1.png.aes" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Cifrados/Leslie/ftp1.png.aes" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/llaves_clientes/key_z_ftp1.png_Leslie.PEM" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/llaves_clientes/key_z_gris.jpg_Jhonatan.PEM" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/llaves_clientes/key_z_rojo.jpg_Jhonatan.PEM" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/llaves_clientes/vector_ftp1.png_Leslie.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/llaves_clientes/vector_gris.jpg_Jhonatan.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/llaves_clientes/vector_rojo.jpg_Jhonatan.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/media/documents/ftp1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/media/documents/gris.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/media/documents/rojo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vector.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cifrados/Leslie/c2_ftp5.png.aes" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cifrados/Leslie/ftp5.png.aes" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cifrados/Leslie/ftp8.png.aes" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/llaves_clientes/key_d_Akira.PEM" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/llaves_clientes/key_e_Akira.PEM" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/llaves_clientes/key_n_Akira.PEM" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/llaves_clientes/key_z_ftp5.png_Leslie.PEM" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/llaves_clientes/key_z_ftp8.png_Leslie.PEM" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/llaves_clientes/vector_ftp5.png_Leslie.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/llaves_clientes/vector_ftp8.png_Leslie.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/media/cipher/ftp5.png.aes" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/media/cipher/ftp5.png_tievHSv.aes" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/media/documents/ftp5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/media/documents/ftp5_5Zo6Eqc.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/media/documents/ftp5_CjVTj8Q.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/media/documents/ftp5_JX9bM7S.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/media/documents/ftp5_W2j0rRG.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/media/documents/ftp5_WB7DVLa.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/media/documents/ftp5_bugvmfN.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/media/documents/ftp5_hYkqjo1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/media/documents/ftp5_lpVlfVK.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/media/documents/ftp5_pYse9Yl.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/media/documents/ftp5_vUyJEZF.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/media/documents/ftp8.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RutaArchivo.txt" afterPath="$PROJECT_DIR$/RutaArchivo.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/llaves_clientes/key_d_Jhonatan.PEM" afterPath="$PROJECT_DIR$/llaves_clientes/key_d_Jhonatan.PEM" />
@@ -28,10 +34,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/llaves_clientes/key_e_Leslie.PEM" afterPath="$PROJECT_DIR$/llaves_clientes/key_e_Leslie.PEM" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/llaves_clientes/key_n_Jhonatan.PEM" afterPath="$PROJECT_DIR$/llaves_clientes/key_n_Jhonatan.PEM" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/llaves_clientes/key_n_Leslie.PEM" afterPath="$PROJECT_DIR$/llaves_clientes/key_n_Leslie.PEM" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/llaves_clientes/user.txt" afterPath="$PROJECT_DIR$/llaves_clientes/user.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nube/Cliente.py" afterPath="$PROJECT_DIR$/nube/Cliente.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/llaves_clientes/vector_ftp4.png_Leslie.txt" afterPath="$PROJECT_DIR$/llaves_clientes/vector_ftp4.png_Leslie.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nube/forms.py" afterPath="$PROJECT_DIR$/nube/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nube/models.py" afterPath="$PROJECT_DIR$/nube/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nube/views.py" afterPath="$PROJECT_DIR$/nube/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/x" afterPath="$PROJECT_DIR$/x" />
     </list>
@@ -43,7 +47,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/criptoleslie$Servidor.coverage" NAME="Servidor Coverage Results" MODIFIED="1510784952018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/llaves_servidor" />
+    <SUITE FILE_PATH="coverage/criptoleslie$Servidor.coverage" NAME="Servidor Coverage Results" MODIFIED="1510811244643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/llaves_servidor" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -69,8 +73,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nube/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="159" column="12" lean-forward="false" selection-start-line="159" selection-start-column="12" selection-end-line="159" selection-end-column="12" />
+            <state relative-caret-position="100">
+              <caret line="99" column="17" lean-forward="false" selection-start-line="99" selection-start-column="17" selection-end-line="99" selection-end-column="17" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -82,7 +86,7 @@
         <entry file="file://$PROJECT_DIR$/criptoleslie/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1044">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -102,7 +106,7 @@
         <entry file="file://$PROJECT_DIR$/nube/Cliente.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="234">
-              <caret line="145" column="25" lean-forward="true" selection-start-line="145" selection-start-column="25" selection-end-line="145" selection-end-column="25" />
+              <caret line="145" column="25" lean-forward="false" selection-start-line="145" selection-start-column="25" selection-end-line="145" selection-end-column="25" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -110,12 +114,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Duplicidad.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Duplicidad.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nube/Duplicidad.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
-              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="forms.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/nube/forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -154,10 +170,10 @@
         <option value="$PROJECT_DIR$/nube/templates/nube/profile.html" />
         <option value="$PROJECT_DIR$/nube/nube.py" />
         <option value="$PROJECT_DIR$/nube/Duplicidad.py" />
-        <option value="$PROJECT_DIR$/nube/forms.py" />
-        <option value="$PROJECT_DIR$/nube/views.py" />
         <option value="$PROJECT_DIR$/nube/models.py" />
         <option value="$PROJECT_DIR$/nube/Cliente.py" />
+        <option value="$PROJECT_DIR$/nube/views.py" />
+        <option value="$PROJECT_DIR$/nube/forms.py" />
       </list>
     </option>
   </component>
@@ -305,15 +321,16 @@
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1366" height="743" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21060605" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281493" sideWeight="0.5030303" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37091503" sideWeight="0.4969697" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="manage.py@criptoleslie" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21060605" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -321,7 +338,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="manage.py@criptoleslie" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -682,23 +698,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nube/forms.py">
+    <entry file="file://$PROJECT_DIR$/criptoleslie/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="64" column="4" lean-forward="false" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-1044">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nube/views.py">
+    <entry file="file://$PROJECT_DIR$/nube/Duplicidad.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="159" column="12" lean-forward="false" selection-start-line="159" selection-start-column="12" selection-end-line="159" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="72">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -710,29 +722,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/criptoleslie/settings.py">
+    <entry file="file://$PROJECT_DIR$/nube/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1044">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="100">
+          <caret line="99" column="17" lean-forward="false" selection-start-line="99" selection-start-column="17" selection-end-line="99" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nube/Cliente.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
-          <caret line="145" column="25" lean-forward="true" selection-start-line="145" selection-start-column="25" selection-end-line="145" selection-end-column="25" />
+          <caret line="145" column="25" lean-forward="false" selection-start-line="145" selection-start-column="25" selection-end-line="145" selection-end-column="25" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nube/Duplicidad.py">
+    <entry file="file://$PROJECT_DIR$/nube/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="175">
+          <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
