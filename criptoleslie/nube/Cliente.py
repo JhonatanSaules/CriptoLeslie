@@ -4,7 +4,16 @@ import hashlib
 import hmac
 import Crypto.Cipher.AES, Crypto.Util.Counter
 import hmac
+
+from django.forms import FileField
+
 from rsagen import *
+from models import Cipher
+from Duplicidad import *
+from django.core.files.base import ContentFile
+from django.core.files import File
+
+
 
 #va a mandar mensajes al servidor
 def subir_arch(filename,nom_user):
@@ -100,9 +109,18 @@ def subir_arch(filename,nom_user):
         temp_cifrado = open("Cifrados/"+nom_user+"/"+filename2+".aes", "wb")
         temp_cifrado.write(ctext)
         temp_cifrado.close()
+
         print ""
         print "Mensaje Cifrado... C1 "
         #mensaje="salir"
+
+        f = open("Cifrados/"+nom_user+"/"+filename2+".aes")
+        f.read()
+        newdoc = Cipher(filename=filename2, docfile=File(f))
+        newdoc.save(File(f))
+
+
+
 
         contentK = open("llaves_clientes/key_e_"+nom_user+".PEM", "rb").read()
         m=''
@@ -123,8 +141,9 @@ def subir_arch(filename,nom_user):
         temp_cifrado.close()
         print ""
         print "Mensaje Cifrado... C2 "
-        #     c2 = open("./c2.aes", "r").read()
-        #     hc1 = hashlib.sha256(c2).hexdigest()[:16]
+        c1 = open("Cifrados/"+nom_user+"/"+filename2+".aes", "r").read()
+        hc1 = hashlib.sha256(c1).hexdigest()[:16]
+        deduplication(hc1)
         #     mensaje = str(hc1)
         #
         #     #intento mandar msj
@@ -156,9 +175,8 @@ def subir_arch(filename,nom_user):
     # sock.connect((host,port))
     # print "Ingrese un mensaje o salir para terminar"
     # while mensaje != "salir":
-    #
     #     ##################################################################  CIFRADO  #####################################################################
-    #     contentK = open("key_e_"+usuario+".PEM", "rb").read()
+    #     contentK = open("key_e_"+nom_user+".PEM", "rb").read()
     #     m=''
     #     m = str(open("key_z.PEM", "rb").read())
     #     iv = hmac.new(contentK, m, hashlib.sha256).hexdigest()[:32]  ## Generacion del IV
@@ -180,7 +198,6 @@ def subir_arch(filename,nom_user):
     #     c2 = open("./c2.aes", "r").read()
     #     hc1 = hashlib.sha256(c2).hexdigest()[:16]
     #     mensaje = str(hc1)
-    #
     #     #intento mandar msj
     #     try:
     #         sock.send(mensaje)
@@ -189,9 +206,7 @@ def subir_arch(filename,nom_user):
     #     except:
     #         print "no se mando el mensaje"
     #         mensaje="salir"
-    #
     #     #mensaje="salir"
-    #
     # sock.close() #recuerden cerrar el socket
 
 

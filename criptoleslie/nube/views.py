@@ -1,24 +1,22 @@
-import user
 import os
 from django.contrib.auth import login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 from django.core.urlresolvers import reverse
-from django.http import HttpResponseRedirect, request
+from django.http import HttpResponseRedirect
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_protect
 from django.views.generic import TemplateView
 from django.views.generic.base import View
 from django.views.generic.edit import FormView
-from nube.rsagen import *
 from nube.models import Document
-from os import walk
-from glob import glob
-from os import walk
 from nube.Cliente import *
 from criptoleslie import config
 from nube.forms import RegistrationForm, LoginForm, UploadForm
+from django.core.validators import validate_email
+from django.core.exceptions import ValidationError
+
 
 class LoginView(FormView):
     template_name = 'nube/login.html'
@@ -56,26 +54,66 @@ class LogoutView(View):
         logout(request)
         return HttpResponseRedirect(config.LOGOUT_REDIRECT_URL)
 
+def ValidateEmail(email):
+    try:
+        validate_email(email)
+        print True
+        return True
+    except ValidationError:
+        print False
+        return False
+
+def verificar_clave(passw):
+
+    if not 6 <= len(passw) <= 12:
+        is_valid2 = 0
+        return 0
+
+    numeros = 0
+    mayusculas = 0
+    minusculas = 0
+
+    for carac in passw:
+        if carac.isspace():
+            return False
+        elif carac.isdigit():
+            numeros += 1
+        elif carac.isupper():
+            mayusculas += 1
+        elif carac.islower():
+            minusculas += 1
+    if numeros >= 4 and mayusculas !=0 and minusculas >= 4:
+        is_valid2 = 1
+        return 1
 
 class RegisterView(FormView):
     template_name = 'nube/register.html'
     form_class = RegistrationForm
-
     def form_valid(self, form):
 
-        user = User.objects.create_user(
-            # name=form.cleaned_data["name"],
-            # apellido1=form.cleaned_data["apellido1"],
-            # apellido2=form.cleaned_data["apellido2"],
-            username=form.cleaned_data["username"],
-            password=form.cleaned_data['password1'],
-            email=form.cleaned_data['email']
-        )
-        gen_rsa(user.username)
-        path = '/home/jhonatan/PycharmProjects/CriptoLeslie/criptoleslie/Cifrados/'+user.username
-
-        os.mkdir(path)
-        return super(RegisterView, self).form_valid(form)
+        verificar_clave(form.cleaned_data['password1'])
+        is_valid = ValidateEmail(form.cleaned_data['email'])
+        if is_valid:
+            print("El email es correcto")
+            user = User.objects.create_user(
+                # name=form.cleaned_data["name"],
+                # apellido1=form.cleaned_data["apellido1"],
+                # apellido2=form.cleaned_data["apellido2"],
+                username=form.cleaned_data["username"],
+                password=form.cleaned_data['password1'],
+                email=form.cleaned_data['email']
+            )
+            # print (validate_email(user.email))
+            # is_valid = validate_email(user.email)
+            # print is_valid
+            gen_rsa(user.username)
+            path = '/home/jhonatan/PycharmProjects/CriptoLeslie/criptoleslie/Cifrados/' + user.username
+            os.mkdir(path)
+            path2 = '/home/jhonatan/PycharmProjects/CriptoLeslie/criptoleslie/hash/' + user.username
+            os.mkdir(path2)
+            return super(RegisterView, self).form_valid(form)
+        else:
+            print("El email es incorrecto")
 
     def get_success_url(self):
         return reverse('register-success')

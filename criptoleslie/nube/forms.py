@@ -1,4 +1,3 @@
-import re
 from django import forms
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.models import User
@@ -19,7 +18,6 @@ class LoginForm(AuthenticationForm):
                 classes = self.fields[f_name].widget.attrs.get('class', '')
                 classes += ' has-error'
                 self.fields[f_name].widget.attrs['class'] = classes
-
 
 class RegistrationForm(forms.Form):
 
@@ -64,7 +62,7 @@ class RegistrationForm(forms.Form):
 
 
 class UploadForm(forms.Form):
- filename = forms.CharField(max_length=100)
- docfile = forms.FileField(
+    filename = forms.CharField(max_length=100)
+    docfile = forms.FileField(
         label='Selecciona un archivo'
     )
