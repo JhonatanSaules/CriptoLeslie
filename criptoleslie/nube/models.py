@@ -11,4 +11,5 @@ class Cipher(models.Model):
 
 class Hashes(models.Model):
     filename = models.CharField(max_length=100)
+    hash_c = models.CharField(max_length=100, default=' ')
     docfile = models.FileField(upload_to='hash')

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Subir Archivo</title>
+    <title>Download</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-theme.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
@@ -43,13 +43,31 @@
 
         <div class="row" id="content-container">
             <div class="page-header">
-                <h2></h2>
+                <h2>Estos son tus archivos {{ user.username }}</h2>
             </div>
             <div class="jumbotron content">
-                <form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
-                    {{ form.as_p }}
-                    <input type="submit" value="Submit">
-                </form>
+                <!-- <h1>¡Bienvenido Alumno!</h1>
+                <img src="imgs/imagen-de-cosas.jpg" class="img"> -->
+                <div class="jumbotron content">
+                    <select name="selCombo" size="1">
+
+                        {% for element in lstFiles %}
+                            <option value="archivo">{{ element }}</option>
+                        {% endfor %}
+
+
+                    </select>
+                    <form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
+                        {{ form.as_p }}
+                        <input type="submit" value="Submit">
+
+                    </form>
+                </div>
+
+
+
+
+
             </div>
         </div>
 

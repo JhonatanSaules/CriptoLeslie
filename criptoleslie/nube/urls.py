@@ -5,6 +5,7 @@ urlpatterns = [
         # index
         url(r'^index/$', views.IndexView.as_view(), name='index'),
         url(r'^profile/$', views.lista, name='profile'),
+        url(r'^download/$', views.download, name='download'),
         #url(r'^profile/$', views.ProfileView.as_view(), name='profile'),
         #url(r'^subir/$', views.SubirView.as_view(), name='uploads'),
         url(r'^uploads/', views.upload_file, name="uploads"),

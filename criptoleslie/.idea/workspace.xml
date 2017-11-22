@@ -2,30 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4bf220dd-2e92-46d7-80e8-7644e3871390" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Cifrados/Leslie/c2_ftp5.png.aes" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Cifrados/Leslie/ftp5.png.aes" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Cifrados/Leslie/ftp8.png.aes" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/llaves_clientes/key_d_Akira.PEM" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/llaves_clientes/key_e_Akira.PEM" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/llaves_clientes/key_n_Akira.PEM" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/llaves_clientes/key_z_ftp5.png_Leslie.PEM" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/llaves_clientes/key_z_ftp8.png_Leslie.PEM" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/llaves_clientes/vector_ftp5.png_Leslie.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/llaves_clientes/vector_ftp8.png_Leslie.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/media/cipher/ftp5.png.aes" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/media/cipher/ftp5.png_tievHSv.aes" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/media/documents/ftp5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/media/documents/ftp5_5Zo6Eqc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/media/documents/ftp5_CjVTj8Q.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/media/documents/ftp5_JX9bM7S.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/media/documents/ftp5_W2j0rRG.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/media/documents/ftp5_WB7DVLa.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/media/documents/ftp5_bugvmfN.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/media/documents/ftp5_hYkqjo1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/media/documents/ftp5_lpVlfVK.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/media/documents/ftp5_pYse9Yl.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/media/documents/ftp5_vUyJEZF.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/media/documents/ftp8.png" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nube/migrations/0005_hashes_hash_c.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nube/templates/nube/download.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cifrados/Jhonatan/c2_rojo.jpg.aes" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cifrados/Jhonatan/rojo.jpg.aes" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cifrados/Leslie/c2_ftp1.png.aes" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cifrados/Leslie/c2_ftp4.png.aes" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cifrados/Leslie/ftp1.png.aes" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cifrados/Leslie/ftp4.png.aes" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/llaves_clientes/key_z_ftp1.png_Leslie.PEM" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/llaves_clientes/key_z_ftp4.png_Leslie.PEM" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/llaves_clientes/key_z_rojo.jpg_Jhonatan.PEM" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/llaves_clientes/vector_ftp1.png_Leslie.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/llaves_clientes/vector_ftp4.png_Leslie.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/llaves_clientes/vector_rojo.jpg_Jhonatan.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/media/cipher/ftp1.png.aes" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/media/cipher/ftp4.png.aes" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/media/cipher/rojo.jpg.aes" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/media/documents/ftp1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/media/documents/ftp4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/media/documents/rojo.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RutaArchivo.txt" afterPath="$PROJECT_DIR$/RutaArchivo.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/llaves_clientes/key_d_Jhonatan.PEM" afterPath="$PROJECT_DIR$/llaves_clientes/key_d_Jhonatan.PEM" />
@@ -34,8 +30,13 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/llaves_clientes/key_e_Leslie.PEM" afterPath="$PROJECT_DIR$/llaves_clientes/key_e_Leslie.PEM" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/llaves_clientes/key_n_Jhonatan.PEM" afterPath="$PROJECT_DIR$/llaves_clientes/key_n_Jhonatan.PEM" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/llaves_clientes/key_n_Leslie.PEM" afterPath="$PROJECT_DIR$/llaves_clientes/key_n_Leslie.PEM" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/llaves_clientes/vector_ftp4.png_Leslie.txt" afterPath="$PROJECT_DIR$/llaves_clientes/vector_ftp4.png_Leslie.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nube/forms.py" afterPath="$PROJECT_DIR$/nube/forms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/llaves_clientes/user.txt" afterPath="$PROJECT_DIR$/llaves_clientes/user.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nube/Cliente.py" afterPath="$PROJECT_DIR$/nube/Cliente.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nube/Duplicidad.py" afterPath="$PROJECT_DIR$/nube/Duplicidad.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nube/models.py" afterPath="$PROJECT_DIR$/nube/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nube/templates/nube/profile.html" afterPath="$PROJECT_DIR$/nube/templates/nube/profile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nube/templates/nube/upload.html" afterPath="$PROJECT_DIR$/nube/templates/nube/upload.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nube/urls.py" afterPath="$PROJECT_DIR$/nube/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nube/views.py" afterPath="$PROJECT_DIR$/nube/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/x" afterPath="$PROJECT_DIR$/x" />
     </list>
@@ -47,7 +48,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/criptoleslie$Servidor.coverage" NAME="Servidor Coverage Results" MODIFIED="1510811244643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/llaves_servidor" />
+    <SUITE FILE_PATH="coverage/criptoleslie$Servidor.coverage" NAME="Servidor Coverage Results" MODIFIED="1511331212411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/llaves_servidor" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -73,8 +74,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nube/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="99" column="17" lean-forward="false" selection-start-line="99" selection-start-column="17" selection-end-line="99" selection-end-column="17" />
+            <state relative-caret-position="18">
+              <caret line="185" column="0" lean-forward="false" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -82,21 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/criptoleslie/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1044">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/nube/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+            <state relative-caret-position="216">
+              <caret line="12" column="47" lean-forward="false" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -105,8 +96,8 @@
       <file leaf-file-name="Cliente.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nube/Cliente.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="145" column="25" lean-forward="false" selection-start-line="145" selection-start-column="25" selection-end-line="145" selection-end-column="25" />
+            <state relative-caret-position="100">
+              <caret line="54" column="23" lean-forward="false" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -117,18 +108,40 @@
       <file leaf-file-name="Duplicidad.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nube/Duplicidad.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state relative-caret-position="144">
+              <caret line="8" column="38" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#34#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="download.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nube/templates/nube/download.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1116">
+              <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="upload.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nube/templates/nube/upload.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="918">
+              <caret line="51" column="20" lean-forward="false" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nube/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+            <state relative-caret-position="198">
+              <caret line="14" column="43" lean-forward="false" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -165,15 +178,16 @@
         <option value="$PROJECT_DIR$/llaves_servidor/Servidor.py" />
         <option value="$PROJECT_DIR$/nube/templates/nube/subir.html" />
         <option value="$PROJECT_DIR$/criptoleslie/settings.py" />
+        <option value="$PROJECT_DIR$/nube/nube.py" />
+        <option value="$PROJECT_DIR$/nube/forms.py" />
+        <option value="$PROJECT_DIR$/nube/Cliente.py" />
         <option value="$PROJECT_DIR$/nube/urls.py" />
         <option value="$PROJECT_DIR$/nube/templates/nube/upload.html" />
         <option value="$PROJECT_DIR$/nube/templates/nube/profile.html" />
-        <option value="$PROJECT_DIR$/nube/nube.py" />
+        <option value="$PROJECT_DIR$/nube/views.py" />
+        <option value="$PROJECT_DIR$/nube/templates/nube/download.html" />
         <option value="$PROJECT_DIR$/nube/Duplicidad.py" />
         <option value="$PROJECT_DIR$/nube/models.py" />
-        <option value="$PROJECT_DIR$/nube/Cliente.py" />
-        <option value="$PROJECT_DIR$/nube/views.py" />
-        <option value="$PROJECT_DIR$/nube/forms.py" />
       </list>
     </option>
   </component>
@@ -204,6 +218,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -221,18 +236,30 @@
               <item name="criptoleslie" type="462c0819:PsiDirectoryNode" />
               <item name="nube" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="criptoleslie" type="b2602c69:ProjectViewProjectNode" />
+              <item name="criptoleslie" type="462c0819:PsiDirectoryNode" />
+              <item name="nube" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="criptoleslie" type="b2602c69:ProjectViewProjectNode" />
+              <item name="criptoleslie" type="462c0819:PsiDirectoryNode" />
+              <item name="nube" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="nube" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="http.proxy" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="SearchEverywhereHistoryKey" value="form_valid&#9;null&#9;null" />
@@ -325,10 +352,10 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281493" sideWeight="0.5030303" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37091503" sideWeight="0.4969697" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37091503" sideWeight="0.4969697" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="manage.py@criptoleslie" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21060605" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22348484" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -356,13 +383,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/nube/templates/nube/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="40" column="73" lean-forward="false" selection-start-line="40" selection-start-column="73" selection-end-line="40" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nube/templates/nube/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="900">
@@ -374,7 +394,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
           <caret line="37" column="36" lean-forward="true" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="36" />
-          <folding />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -445,7 +467,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="30" column="14" lean-forward="false" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
-          <folding />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -492,7 +516,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="30" column="14" lean-forward="true" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
-          <folding />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -525,7 +551,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="27" column="41" lean-forward="false" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
-          <folding />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -562,7 +590,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
-          <folding />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -588,13 +618,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nube/templates/nube/succes.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="55" lean-forward="false" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/criptoleslie/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -606,13 +629,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nube/templates/nube/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="56" column="20" lean-forward="false" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -630,24 +646,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nube/templates/nube/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/django/contrib/flatpages/tests/test_forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="52" column="8" lean-forward="false" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nube/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="38" lean-forward="false" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -665,90 +667,124 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nube/templates/nube/profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="45" column="46" lean-forward="false" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/llaves_servidor/Servidor.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nube/templates/nube/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="42" column="32" lean-forward="false" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nube/templates/nube/upload.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="694">
-          <caret line="52" column="18" lean-forward="true" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/criptoleslie/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1044">
+        <state relative-caret-position="252">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nube/Duplicidad.py">
+    <entry file="file://$PROJECT_DIR$/nube/templates/nube/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state relative-caret-position="-1034">
+          <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nube/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="7" column="42" lean-forward="false" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nube/templates/nube/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="42" column="32" lean-forward="false" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nube/templates/nube/succes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="55" lean-forward="false" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nube/templates/nube/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="52" column="28" lean-forward="false" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nube/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="14" column="43" lean-forward="false" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nube/templates/nube/download.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1116">
+          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nube/models.py">
+    <entry file="file://$PROJECT_DIR$/nube/templates/nube/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-          <folding />
+        <state relative-caret-position="900">
+          <caret line="56" column="20" lean-forward="false" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nube/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="99" column="17" lean-forward="false" selection-start-line="99" selection-start-column="17" selection-end-line="99" selection-end-column="17" />
+        <state relative-caret-position="18">
+          <caret line="185" column="0" lean-forward="false" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/nube/templates/nube/upload.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="51" column="20" lean-forward="false" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/nube/Cliente.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="145" column="25" lean-forward="false" selection-start-line="145" selection-start-column="25" selection-end-line="145" selection-end-column="25" />
+        <state relative-caret-position="100">
+          <caret line="54" column="23" lean-forward="false" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nube/forms.py">
+    <entry file="file://$PROJECT_DIR$/nube/Duplicidad.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+        <state relative-caret-position="144">
+          <caret line="8" column="38" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="38" />
           <folding>
-            <element signature="e#0#24#0" expanded="true" />
+            <element signature="e#0#34#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nube/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="47" lean-forward="false" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>

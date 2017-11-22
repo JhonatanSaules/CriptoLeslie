@@ -147,6 +147,7 @@ def lista(request):
             (nombreFichero, extension) = os.path.splitext(fichero)
             lstFiles.append(nombreFichero + extension)
 
+
     print(lstFiles)
     print ('LISTADO FINALIZADO')
     return render(request, 'nube/profile.html', {'lstFiles': lstFiles})
@@ -159,6 +160,7 @@ def upload_file(request):
         if form.is_valid():
             newdoc = Document(filename=request.POST['filename'], docfile=request.FILES['docfile'])
             newdoc.save(form)
+            print newdoc.docfile.name
             nom_user = open("llaves_clientes/user.txt", "r").read()
             subir_arch(newdoc.filename,str(nom_user))
             return redirect("profile")
@@ -168,6 +170,42 @@ def upload_file(request):
     # return render_to_response('upload.html', {'form': form}, context_instance = RequestContext(request))
     return render(request, 'nube/upload.html', {'form': form})
 
+
+
+#class DownloadView(TemplateView):
+ #   template_name = 'nube/download.html'
+
+def download(request):
+    nom_user = open("llaves_clientes/user.txt", "r").read()
+    path = '/home/jhonatan/PycharmProjects/CriptoLeslie/criptoleslie/Cifrados/'+nom_user
+    # Lista vacia para incluir los ficheros
+    lstFiles = []
+
+    # Lista con todos los ficheros del directorio:
+    lstDir = os.walk(path)  # os.walk()Lista directorios y ficheros
+
+    for root, dirs, files in lstDir:
+        for fichero in files:
+            (nombreFichero, extension) = os.path.splitext(fichero)
+            lstFiles.append(nombreFichero + extension)
+
+
+    print(lstFiles)
+    print ('LISTADO FINALIZADO')
+
+    if request.method == 'POST':
+        form = UploadForm(request.POST, request.FILES)
+        if form.is_valid():
+            newdoc = Document(filename=request.POST['filename'], docfile=request.FILES['docfile'])
+            newdoc.save(form)
+            print newdoc.docfile.name
+            nom_user = open("llaves_clientes/user.txt", "r").read()
+            subir_arch(newdoc.filename,str(nom_user))
+            return redirect("profile")
+    else:
+        form = UploadForm()
+
+    return render(request, 'nube/download.html', {'lstFiles': lstFiles})
 
 
 

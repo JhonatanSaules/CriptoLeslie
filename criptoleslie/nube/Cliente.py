@@ -4,16 +4,9 @@ import hashlib
 import hmac
 import Crypto.Cipher.AES, Crypto.Util.Counter
 import hmac
-
-from django.forms import FileField
-
 from rsagen import *
-from models import Cipher
 from Duplicidad import *
-from django.core.files.base import ContentFile
 from django.core.files import File
-
-
 
 #va a mandar mensajes al servidor
 def subir_arch(filename,nom_user):
@@ -106,18 +99,18 @@ def subir_arch(filename,nom_user):
         cipher = Crypto.Cipher.AES.new(contentK2, Crypto.Cipher.AES.MODE_CTR, counter=ctr)
         ctext = cipher.encrypt(m)
         ##Mandamos el Cifrado a un archivo temporal, dicho archivo es el qe se subira a la nube
-        temp_cifrado = open("Cifrados/"+nom_user+"/"+filename2+".aes", "wb")
-        temp_cifrado.write(ctext)
-        temp_cifrado.close()
-
+        #temp_cifrado = open("Cifrados/"+nom_user+"/"+filename2+".aes", "wb")
+        #temp_cifrado.write(ctext)
+        #temp_cifrado.close()
+        fc1 = str(ctext)
         print ""
         print "Mensaje Cifrado... C1 "
         #mensaje="salir"
 
-        f = open("Cifrados/"+nom_user+"/"+filename2+".aes")
-        f.read()
-        newdoc = Cipher(filename=filename2, docfile=File(f))
-        newdoc.save(File(f))
+        #f = open("Cifrados/"+nom_user+"/"+filename2+".aes")
+        #f.read()
+        #newdoc = Cipher(filename=filename2, docfile=File(f))
+        #newdoc.save(File(f))
 
 
 
@@ -136,14 +129,15 @@ def subir_arch(filename,nom_user):
         cipher = Crypto.Cipher.AES.new(contentK2, Crypto.Cipher.AES.MODE_CTR, counter=ctr)
         ctext = cipher.encrypt(m)
         ##Mandamos el Cifrado a un archivo temporal, dicho archivo es el qe se subira a la nube
-        temp_cifrado = open("Cifrados/"+nom_user+"/c2_"+filename2+".aes", "wb")
-        temp_cifrado.write(ctext)
-        temp_cifrado.close()
+        #temp_cifrado = open("Cifrados/"+nom_user+"/c2_"+filename2+".aes", "wb")
+        #temp_cifrado.write(ctext)
+        #temp_cifrado.close()
         print ""
         print "Mensaje Cifrado... C2 "
-        c1 = open("Cifrados/"+nom_user+"/"+filename2+".aes", "r").read()
-        hc1 = hashlib.sha256(c1).hexdigest()[:16]
-        deduplication(hc1)
+
+        hc1 = hashlib.sha256(fc1).hexdigest()[:16]
+        fc2 = str(ctext)
+        deduplication(hc1,nom_user,filename2,fc1,fc2)
         #     mensaje = str(hc1)
         #
         #     #intento mandar msj

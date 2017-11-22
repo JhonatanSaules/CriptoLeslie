@@ -24,7 +24,7 @@
 
         <ul class="nav nav-pills nav-stacked" id="menu-list">
             <li class="active"><a href="{% url 'profile' %}"><span class="glyphicon glyphicon-home"></span>&nbsp; Home</a></li>
-            <li><a href="{% url 'index' %}"><span class="glyphicon glyphicon-edit"></span>&nbsp; Descargar</a></li>
+            <li><a href="{% url 'download' %}"><span class="glyphicon glyphicon-edit"></span>&nbsp; Descargar</a></li>
             <li><a href="{% url 'uploads' %}"><span class="glyphicon glyphicon-ok"></span>&nbsp; Subir</a></li>
             <li><a href="{% url 'index' %}"><span class="glyphicon glyphicon-hourglass"></span>&nbsp; Eliminar</a></li>
             <li><a href="{% url 'logout' %}"><span class="glyphicon glyphicon-hourglass"></span>&nbsp;{% trans "Cerrar Sesi&oacute;n " %} </a></li>
@@ -48,20 +48,9 @@
             <div class="jumbotron content">
                 <!-- <h1>¡Bienvenido Alumno!</h1>
                 <img src="imgs/imagen-de-cosas.jpg" class="img"> -->
-                <p>{{ lstFiles.0 }}</p>
-                <p>{{ lstFiles.1 }}</p>
-                <p>{{ lstFiles.2 }}</p>
-                <p>{{ lstFiles.3 }}</p>
-                <p>{{ lstFiles.4 }}</p>
-                <p>{{ lstFiles.5 }}</p>
-                <p>{{ lstFiles.6 }}</p>
-                <p>{{ lstFiles.7 }}</p>
-                <p>{{ lstFiles.8 }}</p>
-                <p>{{ lstFiles.9 }}</p>
-                <p>{{ lstFiles.10 }}</p>
-
-
-
+                {% for element in lstFiles %}
+                    <p>{{ element }}</p>
+                {% endfor %}
             </div>
         </div>
 
