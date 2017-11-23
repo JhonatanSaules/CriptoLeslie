@@ -12,8 +12,9 @@ from django.views.generic.base import View
 from django.views.generic.edit import FormView
 from nube.models import Document
 from nube.Cliente import *
+from nube.Descargar import *
 from criptoleslie import config
-from nube.forms import RegistrationForm, LoginForm, UploadForm
+from nube.forms import RegistrationForm, LoginForm, UploadForm, DownloadForm
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
 
@@ -111,6 +112,8 @@ class RegisterView(FormView):
             os.mkdir(path)
             path2 = '/home/jhonatan/PycharmProjects/CriptoLeslie/criptoleslie/hash/' + user.username
             os.mkdir(path2)
+            path3 = '/home/jhonatan/PycharmProjects/CriptoLeslie/criptoleslie/Descifrados/' + user.username
+            os.mkdir(path3)
             return super(RegisterView, self).form_valid(form)
         else:
             print("El email es incorrecto")
@@ -145,7 +148,7 @@ def lista(request):
     for root, dirs, files in lstDir:
         for fichero in files:
             (nombreFichero, extension) = os.path.splitext(fichero)
-            lstFiles.append(nombreFichero + extension)
+            lstFiles.append(nombreFichero)
 
 
     print(lstFiles)
@@ -192,20 +195,17 @@ def download(request):
 
     print(lstFiles)
     print ('LISTADO FINALIZADO')
-
     if request.method == 'POST':
-        form = UploadForm(request.POST, request.FILES)
+        form = DownloadForm(request.POST, request.FILES)
         if form.is_valid():
-            newdoc = Document(filename=request.POST['filename'], docfile=request.FILES['docfile'])
-            newdoc.save(form)
-            print newdoc.docfile.name
+            filename=request.POST['filename']
+            print filename
             nom_user = open("llaves_clientes/user.txt", "r").read()
-            subir_arch(newdoc.filename,str(nom_user))
-            return redirect("profile")
+            descargar_archivo(filename,nom_user)
+            return redirect("download")
     else:
-        form = UploadForm()
-
-    return render(request, 'nube/download.html', {'lstFiles': lstFiles})
+        form = DownloadForm()
+    return render(request, 'nube/download.html', {'form': form})
 
 
 

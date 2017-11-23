@@ -66,3 +66,6 @@ class UploadForm(forms.Form):
     docfile = forms.FileField(
         label='Selecciona un archivo'
     )
+
+class DownloadForm(forms.Form):
+    filename = forms.CharField(max_length=100)

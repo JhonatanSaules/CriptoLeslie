@@ -120,7 +120,7 @@ def subir_arch(filename,nom_user):
         m = str(open("llaves_clientes/key_z_"+filename2+"_"+nom_user+".PEM", "rb").read())
         iv = hmac.new(contentK, m, hashlib.sha256).hexdigest()[:32]  ## Generacion del IV
         ##Mandamos el vector IV a un archivo .txt para que tambien pueda ser utilizado por el descifrado
-        escribeIV = open("llaves_clientes/vector_"+filename2+"_"+nom_user+".txt","wb")
+        escribeIV = open("llaves_clientes/vector_c2_"+filename2+"_"+nom_user+".txt","wb")
         escribeIV.write(iv)
         escribeIV.close()
         ##Funcion de cifrado
