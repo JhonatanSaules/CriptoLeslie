@@ -161,11 +161,23 @@ def upload_file(request):
     if request.method == 'POST':
         form = UploadForm(request.POST, request.FILES)
         if form.is_valid():
-            newdoc = Document(filename=request.POST['filename'], docfile=request.FILES['docfile'])
+            palabra2 = str(request.FILES['docfile'])
+            newdoc = Document(docfile=request.FILES['docfile'])
             newdoc.save(form)
-            print newdoc.docfile.name
+
+            #palabra = newdoc.docfile.name
+            #print "nombre: "+palabra
+            #palabra1 = palabra.split('/')
+            #tamano = len(palabra1)
+            #i = 0
+            #print "Tamano de Cadena: ", tamano
+            #for i in range(0, tamano):
+                #print "Numero: ", i, palabra1[i]
+            #palabra2 = palabra1[1]
+            print "Ultima palabra: ", palabra2
+
             nom_user = open("llaves_clientes/user.txt", "r").read()
-            subir_arch(newdoc.filename,str(nom_user))
+            subir_arch(palabra2,str(nom_user))
             return redirect("profile")
     else:
         form = UploadForm()

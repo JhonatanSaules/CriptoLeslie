@@ -94,9 +94,9 @@ def subir_arch(filename,nom_user):
         escribeIV.write(iv)
         escribeIV.close()
         ##Funcion de cifrado
-        contentK2 = hmac.new(contentK, m, hashlib.sha256).hexdigest()[:16]
+        #contentK2 = hmac.new(contentK, m, hashlib.sha256).hexdigest()[:16]
         ctr = Crypto.Util.Counter.new(128, initial_value=long(iv, 16))
-        cipher = Crypto.Cipher.AES.new(contentK2, Crypto.Cipher.AES.MODE_CTR, counter=ctr)
+        cipher = Crypto.Cipher.AES.new(contentK, Crypto.Cipher.AES.MODE_CTR, counter=ctr)
         ctext = cipher.encrypt(m)
         ##Mandamos el Cifrado a un archivo temporal, dicho archivo es el qe se subira a la nube
         #temp_cifrado = open("Cifrados/"+nom_user+"/"+filename2+".aes", "wb")
@@ -114,7 +114,7 @@ def subir_arch(filename,nom_user):
 
 
 
-
+        contentK=""
         contentK = open("llaves_clientes/key_e_"+nom_user+".PEM", "rb").read()
         m=''
         m = str(open("llaves_clientes/key_z_"+filename2+"_"+nom_user+".PEM", "rb").read())
@@ -124,7 +124,8 @@ def subir_arch(filename,nom_user):
         escribeIV.write(iv)
         escribeIV.close()
         ##Funcion de cifrado
-        contentK2 = hmac.new(contentK, m, hashlib.sha256).hexdigest()[:16]
+        #contentK2 = hmac.new(contentK, m, hashlib.sha256).hexdigest()[:16]
+        contentK2 = hashlib.sha256(contentK).hexdigest()[:16]
         ctr = Crypto.Util.Counter.new(128, initial_value=long(iv, 16))
         cipher = Crypto.Cipher.AES.new(contentK2, Crypto.Cipher.AES.MODE_CTR, counter=ctr)
         ctext = cipher.encrypt(m)

@@ -8,6 +8,9 @@ def deduplication(hc1,nom_user,filename2,fc1,fc2):
     try:
         hc = Hashes.objects.get(hash_c=hc1)
         var = hc.hash_c
+        doc = File(hc.docfile).read()
+
+        print doc
     except:
         var = ""
     #hash_comp = open("hash/"+nom_user+"/"+str(var)+".sha", "rb").read()
@@ -23,7 +26,7 @@ def deduplication(hc1,nom_user,filename2,fc1,fc2):
         filec2.close()
         f = open("Cifrados/"+nom_user+"/c2_"+filename2+".aes")
         f.read()
-        newdoc = Cipher(filename="c2_"+filename2, docfile=File(f))
+        newdoc = Cipher(filename="c2_"+filename2, hash_c=hc1, user_name=nom_user, docfile=File(f))
         newdoc.save(File(f))
         f.close()
 
@@ -43,7 +46,7 @@ def deduplication(hc1,nom_user,filename2,fc1,fc2):
         filec1.close()
         f = open("Cifrados/"+nom_user+"/"+filename2+".aes")
         f.read()
-        newdoc = Cipher(filename=filename2, docfile=File(f))
+        newdoc = Cipher(filename=filename2, hash_c=hc1, user_name=nom_user, docfile=File(f))
         newdoc.save(File(f))
         f.close()
         filec2 = open("Cifrados/"+nom_user+"/c2_"+filename2+".aes", "wb")
@@ -51,7 +54,7 @@ def deduplication(hc1,nom_user,filename2,fc1,fc2):
         filec2.close()
         f = open("Cifrados/"+nom_user+"/c2_"+filename2+".aes")
         f.read()
-        newdoc = Cipher(filename="c2_"+filename2, docfile=File(f))
+        newdoc = Cipher(filename="c2_"+filename2, hash_c=hc1, user_name=nom_user, docfile=File(f))
         newdoc.save(File(f))
         f.close()
 
