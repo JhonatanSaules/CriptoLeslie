@@ -12,9 +12,9 @@ from models import Hashes,Cipher
 
 def descargar_archivo(filename, nom_user):
     try:
-        buscar = Hashes.objects.get(filename=filename)
+        buscar = Cipher.objects.get(filename="c2_"+filename)
         var = buscar.filename
-        doc = File(buscar.docfile).read()
+        #doc = File(buscar.docfile).read()
 
     except:
         var = ""
@@ -27,7 +27,16 @@ def descargar_archivo(filename, nom_user):
     #print str(file_c2)
     #hc1 = hashlib.sha256(file_c2).hexdigest()[:16]
 
-    buscar = Cipher.objects.get(filename=filename)
+    hc = Cipher.objects.get(filename="c2_"+filename,user_name=nom_user)
+    doc = hc.hash_c
+    print doc
+    #buscar = Cipher.objects.all()[:5]
+    buscar = Cipher.objects.filter(hash_c=doc).all()[0]
+    #buscar.all()[:1]
+    #buscar = Cipher.objects.filter(hash_c=doc)
+    #print buscar.docfile
+    #print buscar.filename
+    #buscar = Cipher.objects.get(filename=filename)
     file_c1 = File(buscar.docfile).read()
     #file_c1 = str(open("Cifrados/"+nom_user+"/"+filename+".aes","rb").read())
     #print str(file_c1)

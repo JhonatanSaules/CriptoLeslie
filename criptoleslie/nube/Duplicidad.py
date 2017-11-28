@@ -26,9 +26,20 @@ def deduplication(hc1,nom_user,filename2,fc1,fc2):
         filec2.close()
         f = open("Cifrados/"+nom_user+"/c2_"+filename2+".aes")
         f.read()
-        newdoc = Cipher(filename="c2_"+filename2, hash_c=hc1, user_name=nom_user, docfile=File(f))
-        newdoc.save(File(f))
-        f.close()
+        try:
+            Cipher.objects.get(filename="c2_"+filename2,user_name=nom_user)
+            cont=1
+            print "try: "+str(cont)
+        except:
+            cont=0
+            print "except: "+str(cont)
+
+        if cont==0:
+            newdoc = Cipher(filename="c2_"+filename2, hash_c=hc1, user_name=nom_user, docfile=File(f))
+            newdoc.save(File(f))
+            f.close()
+        else:
+            print "nada"
 
     else:
         print "Archivo nuevo"
