@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Profile</title>
+    <title>Delete</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-theme.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
@@ -48,9 +48,26 @@
             <div class="jumbotron content">
                 <!-- <h1>¡Bienvenido Alumno!</h1>
                 <img src="imgs/imagen-de-cosas.jpg" class="img"> -->
-                {% for element in lstFiles %}
-                    <p>{{ element }}</p>
-                {% endfor %}
+                <div class="jumbotron content">
+{#                    <select name="selCombo" size="1">#}
+{##}
+{#                        {% for element in lstFiles %}#}
+{#                            <option value="archivo">{{ element }}</option>#}
+{#                        {% endfor %}#}
+{##}
+{##}
+{#                    </select>#}
+                    <form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
+                        {{ form.as_p }}
+                        <input type="submit" value="Submit">
+
+                    </form>
+                </div>
+
+
+
+
+
             </div>
         </div>
 

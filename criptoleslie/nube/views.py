@@ -13,6 +13,7 @@ from django.views.generic.edit import FormView
 from nube.models import Document
 from nube.Cliente import *
 from nube.Descargar import *
+from nube.Eliminar import *
 from criptoleslie import config
 from nube.forms import RegistrationForm, LoginForm, UploadForm, DownloadForm
 from django.core.validators import validate_email
@@ -218,6 +219,35 @@ def download(request):
     else:
         form = DownloadForm()
     return render(request, 'nube/download.html', {'form': form})
+
+def delete(request):
+    nom_user = open("llaves_clientes/user.txt", "r").read()
+    path = '/home/jhonatan/PycharmProjects/CriptoLeslie/criptoleslie/Cifrados/'+nom_user
+    # Lista vacia para incluir los ficheros
+    lstFiles = []
+
+    # Lista con todos los ficheros del directorio:
+    lstDir = os.walk(path)  # os.walk()Lista directorios y ficheros
+
+    for root, dirs, files in lstDir:
+        for fichero in files:
+            (nombreFichero, extension) = os.path.splitext(fichero)
+            lstFiles.append(nombreFichero + extension)
+
+
+    print(lstFiles)
+    print ('LISTADO FINALIZADO')
+    if request.method == 'POST':
+        form = DownloadForm(request.POST, request.FILES)
+        if form.is_valid():
+            filename=request.POST['filename']
+            print filename
+            nom_user = open("llaves_clientes/user.txt", "r").read()
+            eliminar_archivo(filename,nom_user)
+            return redirect("delete")
+    else:
+        form = DownloadForm()
+    return render(request, 'nube/delete.html', {'form': form})
 
 
 
