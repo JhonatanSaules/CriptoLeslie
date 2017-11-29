@@ -48,6 +48,9 @@
             <div class="jumbotron content">
                 <!-- <h1>¡Bienvenido Alumno!</h1>
                 <img src="imgs/imagen-de-cosas.jpg" class="img"> -->
+                {% for element in lstFiles %}
+                    <p>{{ element }}</p>
+                {% endfor %}
                 <div class="jumbotron content">
 {#                    <select name="selCombo" size="1">#}
 {##}
@@ -57,6 +60,12 @@
 {##}
 {##}
 {#                    </select>#}
+                        {% if messages %}
+                                {% for message in messages %}
+                                    <p{% if message.tags == "success" %} class="alert alert-success"{% endif %}> {{ message }} </p>
+{#                                    <p{% if message.tags == "error" %} class="alert alert-danger"{% endif %}> {{ message }} </p>#}
+                                {% endfor %}
+                        {% endif %}
                     <form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
                         {{ form.as_p }}
                         <input type="submit" value="Submit">

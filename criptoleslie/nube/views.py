@@ -18,7 +18,7 @@ from criptoleslie import config
 from nube.forms import RegistrationForm, LoginForm, UploadForm, DownloadForm
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
-
+from django.contrib import messages
 
 class LoginView(FormView):
     template_name = 'nube/login.html'
@@ -44,10 +44,7 @@ class LoginView(FormView):
         except:
             return "/profile/"
 
-
-
 class LogoutView(View):
-
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
         return super(LogoutView, self).dispatch(*args, **kwargs)
@@ -129,30 +126,31 @@ class RegisterSuccessView(TemplateView):
 class IndexView(TemplateView):
     template_name = 'nube/index.html'
 
-#class ProfileView(TemplateView):
-
-    # def ls(expr='*.*'):
-    #     return glob(expr)
-    # print(ls('/home/jhonatan/PycharmProjects/CriptoLeslie/criptoleslie/Cifrados/*'))
-    # ls('/home/jhonatan/PycharmProjects/CriptoLeslie/criptoleslie/Cifrados/*')
-    # template_name = ''
-
 def lista(request):
     nom_user = open("llaves_clientes/user.txt", "r").read()
-    path = '/home/jhonatan/PycharmProjects/CriptoLeslie/criptoleslie/Cifrados/'+nom_user
-    # Lista vacia para incluir los ficheros
+    buscar = []
+    buscar = Cipher.objects.filter(user_name=nom_user).all()
+    tamano = len(buscar)
+    i = 0
     lstFiles = []
-
-    # Lista con todos los ficheros del directorio:
-    lstDir = os.walk(path)  # os.walk()Lista directorios y ficheros
-
-    for root, dirs, files in lstDir:
-        for fichero in files:
-            (nombreFichero, extension) = os.path.splitext(fichero)
-            lstFiles.append(nombreFichero)
-
-
-    print(lstFiles)
+    print "Tamano de Cadena: ", tamano
+    for i in range(0, tamano):
+        print "Numero: ", i, buscar[i].filename
+        lstFiles.append(buscar[i].filename)
+    print buscar
+    # path = '/home/jhonatan/PycharmProjects/CriptoLeslie/criptoleslie/Cifrados/'+nom_user
+    # # Lista vacia para incluir los ficheros
+    #
+    # # Lista con todos los ficheros del directorio:
+    # lstDir = os.walk(path)  # os.walk()Lista directorios y ficheros
+    #
+    # for root, dirs, files in lstDir:
+    #     for fichero in files:
+    #         (nombreFichero, extension) = os.path.splitext(fichero)
+    #         lstFiles.append(nombreFichero)
+    #
+    #
+    # print(lstFiles)
     print ('LISTADO FINALIZADO')
     return render(request, 'nube/profile.html', {'lstFiles': lstFiles})
 
@@ -179,6 +177,7 @@ def upload_file(request):
 
             nom_user = open("llaves_clientes/user.txt", "r").read()
             subir_arch(palabra2,str(nom_user))
+            #messages.success(request, 'Archivo Almacenado con exito')
             return redirect("profile")
     else:
         form = UploadForm()
@@ -188,26 +187,9 @@ def upload_file(request):
 
 
 
-#class DownloadView(TemplateView):
- #   template_name = 'nube/download.html'
 
 def download(request):
     nom_user = open("llaves_clientes/user.txt", "r").read()
-    path = '/home/jhonatan/PycharmProjects/CriptoLeslie/criptoleslie/Cifrados/'+nom_user
-    # Lista vacia para incluir los ficheros
-    lstFiles = []
-
-    # Lista con todos los ficheros del directorio:
-    lstDir = os.walk(path)  # os.walk()Lista directorios y ficheros
-
-    for root, dirs, files in lstDir:
-        for fichero in files:
-            (nombreFichero, extension) = os.path.splitext(fichero)
-            lstFiles.append(nombreFichero + extension)
-
-
-    print(lstFiles)
-    print ('LISTADO FINALIZADO')
     if request.method == 'POST':
         form = DownloadForm(request.POST, request.FILES)
         if form.is_valid():
@@ -215,28 +197,17 @@ def download(request):
             print filename
             nom_user = open("llaves_clientes/user.txt", "r").read()
             descargar_archivo(filename,nom_user)
+            messages.success(request, 'Archivo Descargado con exito')
             return redirect("download")
+        else:
+            messages.error(request, 'El archivo que deseas descargar no existe')
     else:
         form = DownloadForm()
     return render(request, 'nube/download.html', {'form': form})
 
 def delete(request):
     nom_user = open("llaves_clientes/user.txt", "r").read()
-    path = '/home/jhonatan/PycharmProjects/CriptoLeslie/criptoleslie/Cifrados/'+nom_user
-    # Lista vacia para incluir los ficheros
-    lstFiles = []
 
-    # Lista con todos los ficheros del directorio:
-    lstDir = os.walk(path)  # os.walk()Lista directorios y ficheros
-
-    for root, dirs, files in lstDir:
-        for fichero in files:
-            (nombreFichero, extension) = os.path.splitext(fichero)
-            lstFiles.append(nombreFichero + extension)
-
-
-    print(lstFiles)
-    print ('LISTADO FINALIZADO')
     if request.method == 'POST':
         form = DownloadForm(request.POST, request.FILES)
         if form.is_valid():
@@ -244,7 +215,10 @@ def delete(request):
             print filename
             nom_user = open("llaves_clientes/user.txt", "r").read()
             eliminar_archivo(filename,nom_user)
+            messages.success(request, 'Archivo Eliminado con exito')
             return redirect("delete")
+        else:
+            messages.error(request, 'El archivo que deseas eliminar no existe')
     else:
         form = DownloadForm()
     return render(request, 'nube/delete.html', {'form': form})

@@ -1,0 +1,59 @@
+
+
+	+ url para agregar y eliminar el host
+	
+		*ENTRADA		*SALIDA
+		host			Ok
+		comunidad
+		version SNMP
+	
+	+ estado de dispositivos (resumen)
+		
+		*ENTRADA		*SALIDA
+		clic en boton		Nombre
+					Sistema operativo
+					Ubicacion 
+					Numero de interfaces 
+					Tiempo desde el ultimo reinicio
+					
+	+ busqueda por host
+		
+		*ENTRADA		*SALIDA
+		nombre de host		Nombre
+					Sistema operativo
+					Ubicacion 
+					Numero de interfaces 
+					Tiempo desde el ultimo reinicio
+					
+	+ busqueda por SO
+		
+		*ENTRADA		*SALIDA
+		SO			Nombre
+					Sistema operativo
+					Ubicacion 
+					Numero de interfaces 
+					Tiempo desde el ultimo reinicio
+					
+	+ busqueda por ubicacion
+		
+		*ENTRADA		*SALIDA
+		ubicacion		Nombre
+					Sistema operativo
+					Ubicacion 
+					Numero de interfaces 
+					Tiempo desde el ultimo reinicio
+	
+	+ resumen System de un dispositivo en especifico
+	 
+	 	*ENTRADA		*SALIDA
+		host			logo SO
+					Grupo System
+					
+	+ Grafica
+	 
+	 	*ENTRADA		*SALIDA
+		host			Datos para graficar
+		OID 			
+	
+	
+	

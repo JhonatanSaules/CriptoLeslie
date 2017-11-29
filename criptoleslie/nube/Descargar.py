@@ -15,7 +15,6 @@ def descargar_archivo(filename, nom_user):
         buscar = Cipher.objects.get(filename="c2_"+filename)
         var = buscar.filename
         #doc = File(buscar.docfile).read()
-
     except:
         var = ""
     print var
