@@ -1,76 +1,313 @@
 {% load i18n staticfiles %}
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+<!--
+author: W3layouts
+author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Subir Archivo</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-theme.min.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
-
+<title>Subir Archivo</title>
+<!-- for-meta-tags -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Intricate Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-meta-tags -->
+<link href="{% static 'css/bootstrap.css'%}" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/style3.css' %}" />
+<link href="{% static 'css/font-awesome.css '%}" rel="stylesheet" type="text/css" media="all">
+<link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
 </head>
+	
 <body>
-<div class="row" id="main-content">
-    <div class="col-sm-2" id="menu-bg">
-
-    </div>
-    <div class="col-sm-2" id="side-menu">
-        <div class="text-center" id="image-container">
-            <img src="{% static 'imgs/logo.jpg' %}" class="img-circle" id="logo">
-        </div>
-
-
-        <ul class="nav nav-pills nav-stacked" id="menu-list">
-            <li class="active"><a href="{% url 'profile' %}"><span class="glyphicon glyphicon-home"></span>&nbsp; Home</a></li>
-            <li><a href="{% url 'download' %}"><span class="glyphicon glyphicon-edit"></span>&nbsp; Descargar</a></li>
-            <li><a href="{% url 'uploads' %}"><span class="glyphicon glyphicon-ok"></span>&nbsp; Subir</a></li>
-            <li><a href="{% url 'delete' %}"><span class="glyphicon glyphicon-hourglass"></span>&nbsp; Eliminar</a></li>
-            <li><a href="{% url 'logout' %}"><span class="glyphicon glyphicon-hourglass"></span>&nbsp;{% trans "Cerrar Sesi&oacute;n " %} </a></li>
-        </ul>
-
-        <div id="menu-filler">
-
-        </div>
-    </div>
-    <div class="col-sm-10 col-sm-offset-2" id="main-side">
-        <div class="row" id="header">
-            <div class="pull-right" id="user-name-container">
+<!-- header -->
+<div class="header" id="home">
+		<div class="container">
+			<div class="w3l_header_left"> 
+				<ul>
+					<li><span class="fa fa-phone" aria-hidden="true"></span>+ (52) 55 5555 5555</li>
+					<li><span class="fa fa-envelope-o" aria-hidden="true"></span><a href="mailto:info@example.com">aguirre.saules.olivier@gmail.com</a></li>
+				</ul>
+			</div>
+			<div class="pull-right" id="user-name-container">
                 <div id="id_username">{{ user.username }}<span class="glyphicon glyphicon-education"></span></div>
             </div>
-        </div>
+			<div id="example2">	
 
-        <div class="row" id="content-container">
-            <div class="page-header">
-                <h2></h2>
-            </div>
-            <div class="jumbotron content">
-                {% if messages %}
-                    {% for message in messages %}
-                        <p{% if message.tags == "success" %} class="alert alert-success"{% endif %}> {{ message }} </p>
-                        {#                                    <p{% if message.tags == "error" %} class="alert alert-danger"{% endif %}> {{ message }} </p>#}
-                    {% endfor %}
-                {% endif %}
+				<div class="wrapper2">
+					<div class="content-wrapper2">
+						<div class="search-button2">
+							<span></span>
+						</div>
+						<div class="search-box2">
+							<form action="#" method="post">
+								<input type="search" name="Buscar" placeholder="Busca Aquí" required="">
+								<input type="submit" value="Send"> <img src="{% static 'images/close.png' %}" alt=" " />
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="clearfix"> </div>
+			
+		</div>
+	</div>
+	<div class="logo_nav">
+		<div class="container">
+			<nav class="navbar navbar-default">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>
+					<div class="logo">
+						<h1><a class="navbar-brand" href="index.html">Protocolo Criptográfico <span> CriptoLeslie </span></a></h1>
+					</div>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+					<nav class="link-effect-2" id="link-effect-2">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="{% url 'login' %}"><span data-hover="Principal">Principal</span></a></li>
+							<li><a href=" "><span data-hover="Acerca de">Acerca de </span></a></li>
+							<li><a href="{% url 'uploads' %}"><span data-hover="Subir Archivo">Subir Archivo</span></a></li>
+							<li><a href="{% url 'download' %}"><span data-hover="Descargar Archivo">Descargar Archivo</span></a></li>
+							<li><a href="{% url 'delete' %}"><span data-hover="Eliminar Archivo">Eliminar Archivo</span></a></li>				
+							<li><a href=" "><span data-hover="Contacto">Contacto</span></a></li>
+						</ul>
+					</nav>
+				</div>
+				<!-- /.navbar-collapse -->
+			</nav>
+		</div>
+	</div>
+<!-- //header -->
+<!-- banner1 -->
+	<div class="banner1">
+		<div class="container">
+		</div>
+	</div>
+
+	<div class="services-breadcrumb">
+		<div class="container">
+			<ul>
+				<li><a href="{% url 'index' %}">Principal</a><i>|</i></li>
+				<li>Subir Archivo</li>
+			</ul>
+		</div>
+	</div>
+<!-- //banner1 -->
+
+
+<!-- services-bottom -->
+	<div class="services-bottom">
+		<div class="container">
+			<h3>Subir Archivo</h3>
+
+			<div class="jumbotron content">
                 <form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
                     {{ form.as_p }}
                     <input type="submit" value="Submit">
                 </form>
             </div>
-        </div>
+				<div class="w3ls_services_bottom_left_gridr1">
+							<h4> </h4>
+						</div>
+					</div>
+					
+			
+				
+			
+			<div class="clearfix"> </div>
+	</div>
+	
+<!-- //services-bottom -->
 
-        <div class="row" id="footer">
-            <div class="col-sm-5" id="dir">
-                Av. Juan de Dios Bátiz esq. Av. Miguel Othón de Mendizábal, Col. Lindavista. Demarcación Territorial, Gustavo A. Madero. Ciudad de México. C. P. 07738.
-            </div>
-            <div class="col-sm-5 col-sm-offset-2" id="year">
-                <span class="pull-right"><span class="glyphicon glyphicon-registration-mark"></span>&nbsp;2017</span>
-            </div>
-        </div>
-    </div>
-</div>
 
-<script type="text/javascript" src="{% static 'js/jquery-1.11.3.min.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+
+<!-- //footer -->
+<a href="#home" class="scroll" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+<script type="text/javascript" src="{% static 'js/jquery-2.1.4.min.js'%}"></script>
+<script type="text/javascript" src="{% static 'js/move-top.js'%}"></script>
+<script type="text/javascript" src="{% static 'js/easing.js'%}"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+<!-- //here ends scrolling icon -->
+<script>
+        $(function(){ 
+
+  // parameters
+  // image height
+  var images_height = '600px';
+  // array of images
+  var images_url = [
+      '{% static 'images/banner1.jpg' %}',
+      '{% static 'images/banner2.jpg'%}',
+      '{% static 'images/banner3.jpg'%}'
+  ];
+  var images_count = images_url.length;
+
+  // create nodes
+  for(var j=0;j<images_count+1;j++){
+      $('.banner ul').append('<li></li>')
+  }
+
+  // pagination
+  for(var j=0;j<images_count;j++){
+      if(j==0){
+          $('.banner ol').append('<li class="current"></li>')
+      }else{
+          $('.banner ol').append('<li></li>')
+      }
+  }
+
+  // convert images into backgrounds
+  $('.banner ul li').css('background-image','url('+images_url[0]+')');
+  
+  $.each(images_url,function(key,value){
+      $('.banner ul li').eq(key).css('background-image','url('+value+')');
+  });
+
+  $('.banner').css('height',images_height);
+
+  $('.banner ul').css('width',(images_count+1)*100+'%');
+
+  $('.banner ol').css('width',images_count*20+'px');
+  $('.banner ol').css('margin-left',-images_count*20*0.5-10+'px');
+
+  var num = 0;
+
+  var window_width = $(window).width();
+
+  $(window).resize(function(){
+      window_width = $(window).width();
+      $('.banner ul li').css({width:window_width});
+      clearInterval(timer);
+      nextPlay();
+      timer = setInterval(nextPlay,2300);
+  });
+
+  $('.banner ul li').width(window_width);
+
+  // pagination dots
+  $('.banner ol li').mouseover(function(){
+      $(this).addClass('current').siblings().removeClass('current');
+      var i = $(this).index();
+      //console.log(i);
+      $('.banner ul').stop().animate({left:-i*window_width},500);
+      num = i;
+  });
+
+  // autoplay
+  var timer = null;
+
+  function prevPlay(){
+      num--;
+      if(num<0){
+          $('.banner ul').css({left:-window_width*images_count}).stop().animate({left:-window_width*(images_count-1)},500);
+          num=images_count-1;
+      }else{
+          $('.banner ul').stop().animate({left:-num*window_width},500);
+      }
+      if(num==images_count-1){
+          $('.banner ol li').eq(images_count-1).addClass('current').siblings().removeClass('current');
+      }else{
+          $('.banner ol li').eq(num).addClass('current').siblings().removeClass('current');
+
+      }
+  }
+
+  function nextPlay(){
+      num++;
+      if(num>images_count){
+          $('.banner ul').css({left:0}).stop().animate({left:-window_width},500);
+          num=1;
+      }else{
+          $('.banner ul').stop().animate({left:-num*window_width},500);
+      }
+      if(num==images_count){
+          $('.banner ol li').eq(0).addClass('current').siblings().removeClass('current');
+      }else{
+          $('.banner ol li').eq(num).addClass('current').siblings().removeClass('current');
+
+      }
+  }
+
+  timer = setInterval(nextPlay,2300);
+
+  // auto pause on mouse enter
+  $('.banner').mouseenter(function(){
+      clearInterval(timer);
+      $('.banner i').fadeIn();
+  }).mouseleave(function(){
+      timer = setInterval(nextPlay,2000);
+      $('.banner i').fadeOut();
+  });
+
+  // goto next
+  $('.banner .right').click(function(){
+      nextPlay();
+  });
+
+  // back to previous
+  $('.banner .left').click(function(){
+      prevPlay();
+  });
+
+});
+    </script>
+
+<script type="text/javascript" src="{% static 'js/demo.js' %}"></script>
+<!-- flexSlider -->
+					<link rel="stylesheet" href="{% static 'css/flexslider.css' %}" type="text/css" media="screen" property="" />
+					<script defer src="{% static 'js/jquery.flexslider.js'%}"></script>
+					<script type="text/javascript">
+					$(window).load(function(){
+					  $('.flexslider').flexslider({
+						animation: "slide",
+						start: function(slider){
+						  $('body').removeClass('loading');
+						}
+					  });
+					});
+				  </script>
+				<!-- //flexSlider -->
+
+
+<!-- for bootstrap working -->
+	<script src="{% static 'js/bootstrap.js' %}"></script>
+<!-- //for bootstrap working -->
 </body>
 </html>
