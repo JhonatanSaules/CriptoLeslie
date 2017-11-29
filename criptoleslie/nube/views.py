@@ -33,9 +33,9 @@ class LoginView(FormView):
         nom_user=""
         nom_user = form.get_user()
         print nom_user
-        f_user = open("llaves_clientes/user.txt", "w")
-        f_user.write(str(nom_user))
-        f_user.close()
+        #f_user = open("llaves_clientes/user.txt", "w")
+        #f_user.write(str(nom_user))
+        #f_user.close()
         return super(LoginView, self).form_valid(form)
 
     def get_success_url(self):
@@ -127,7 +127,9 @@ class IndexView(TemplateView):
     template_name = 'nube/index.html'
 
 def lista(request):
-    nom_user = open("llaves_clientes/user.txt", "r").read()
+    nom_user = str(request.user)
+    #print "usuario en request"+nom_user
+    #nom_user = open("llaves_clientes/user.txt", "r").read()
     buscar = []
     buscar = Cipher.objects.filter(user_name=nom_user).all()
     tamano = len(buscar)
@@ -174,8 +176,8 @@ def upload_file(request):
                 #print "Numero: ", i, palabra1[i]
             #palabra2 = palabra1[1]
             print "Ultima palabra: ", palabra2
-
-            nom_user = open("llaves_clientes/user.txt", "r").read()
+            nom_user = str(request.user)
+            #nom_user = open("llaves_clientes/user.txt", "r").read()
             subir_arch(palabra2,str(nom_user))
             #messages.success(request, 'Archivo Almacenado con exito')
             return redirect("profile")
@@ -189,13 +191,15 @@ def upload_file(request):
 
 
 def download(request):
-    nom_user = open("llaves_clientes/user.txt", "r").read()
+    #nom_user = str(request.user)
+    #nom_user = open("llaves_clientes/user.txt", "r").read()
     if request.method == 'POST':
         form = DownloadForm(request.POST, request.FILES)
         if form.is_valid():
             filename=request.POST['filename']
             print filename
-            nom_user = open("llaves_clientes/user.txt", "r").read()
+            nom_user = str(request.user)
+            #nom_user = open("llaves_clientes/user.txt", "r").read()
             descargar_archivo(filename,nom_user)
             messages.success(request, 'Archivo Descargado con exito')
             return redirect("download")
@@ -206,14 +210,15 @@ def download(request):
     return render(request, 'nube/download.html', {'form': form})
 
 def delete(request):
-    nom_user = open("llaves_clientes/user.txt", "r").read()
+    #nom_user = open("llaves_clientes/user.txt", "r").read()
 
     if request.method == 'POST':
         form = DownloadForm(request.POST, request.FILES)
         if form.is_valid():
             filename=request.POST['filename']
             print filename
-            nom_user = open("llaves_clientes/user.txt", "r").read()
+            nom_user = str(request.user)
+            #nom_user = open("llaves_clientes/user.txt", "r").read()
             eliminar_archivo(filename,nom_user)
             messages.success(request, 'Archivo Eliminado con exito')
             return redirect("delete")
