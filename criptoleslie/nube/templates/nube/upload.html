@@ -70,7 +70,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<span class="icon-bar"></span>
 				  </button>
 					<div class="logo">
-						<h1><a class="navbar-brand" href="index.html">Protocolo Criptográfico <span> CriptoLeslie </span></a></h1>
+						<h1><a class="navbar-brand" href="{% url 'profile' %}">Protocolo Criptográfico <span> CriptoLeslie </span></a></h1>
 					</div>
 				</div>
 
@@ -78,7 +78,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 					<nav class="link-effect-2" id="link-effect-2">
 						<ul class="nav navbar-nav">
-							<li class="active"><a href="{% url 'login' %}"><span data-hover="Principal">Principal</span></a></li>
+							<li class="active"><a href="{% url 'profile' %}"><span data-hover="Principal">Principal</span></a></li>
 							<li><a href=" "><span data-hover="Acerca de">Acerca de </span></a></li>
 							<li><a href="{% url 'uploads' %}"><span data-hover="Subir Archivo">Subir Archivo</span></a></li>
 							<li><a href="{% url 'download' %}"><span data-hover="Descargar Archivo">Descargar Archivo</span></a></li>
@@ -101,7 +101,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="services-breadcrumb">
 		<div class="container">
 			<ul>
-				<li><a href="{% url 'index' %}">Principal</a><i>|</i></li>
+				<li><a href="{% url 'profile' %}">Principal</a><i>|</i></li>
 				<li>Subir Archivo</li>
 			</ul>
 		</div>
@@ -132,6 +132,59 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	
 <!-- //services-bottom -->
+
+
+
+<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="col-md-3 w3agile_footer_grid">
+				<h3>Ubicación</h3>
+				<p>Av. Juan de Dios Bátiz esq. Av. Miguel Othón de Mendizábal, Col. Lindavista. Demarcación Territorial, Gustavo A. Madero. Ciudad de México. C. P. 07738.</p>
+				
+			</div>
+			<div class="col-md-2 w3agile_footer_grid">	
+				<h3>Links</h3>
+				<ul>
+					<li><a href="{% url 'profile' %}">Principal</a></li>
+					<li><a href=" ">A cerca de</a></li>
+					<li><a href="{% url 'index' %}">Subir Archivo</a></li>
+					<li><a href="{% url 'uploads' %}">Descargar Archivo</a></li>
+					<li><a href="{% url 'download' %}">Eliminar Archivo</a></li>
+					<li><a href=" ">Contacto</a></li>
+				</ul>
+			</div>
+			
+			
+				<div class="clearfix"> </div>
+			</div>
+			
+	</div>
+	<div class="agileinfo_copy_right">
+		<div class="container">
+			<div class="agileinfo_copy_right_left">
+				<p>© 2017 | Team TT </a></p>
+			</div>
+			<div class="agileinfo_copy_right_right">
+				<ul class="social">
+					<li><a class="social-linkedin" href="#">
+						<i class="fa fa-facebook" aria-hidden="true"></i>
+						<div class="tooltip"><span>Facebook</span></div>
+						</a></li>
+					<li><a class="social-twitter" href="#">
+						<i class="fa fa-twitter" aria-hidden="true"></i>
+						<div class="tooltip"><span>Twitter</span></div>
+						</a></li>
+					<li><a class="social-google" href="#">
+						<i class="fa fa-google" aria-hidden="true"></i>
+						<div class="tooltip"><span>Google+</span></div>
+						</a></li>
+					
+				</ul>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
 
 
 

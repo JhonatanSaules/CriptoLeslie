@@ -70,7 +70,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<span class="icon-bar"></span>
 				  </button>
 					<div class="logo">
-						<h1><a class="navbar-brand" href="index.html">Protocolo Criptográfico <span> CriptoLeslie </span></a></h1>
+						<h1><a class="navbar-brand" href="{% url 'profile' %}">Protocolo Criptográfico <span> CriptoLeslie </span></a></h1>
 					</div>
 				</div>
 
@@ -78,7 +78,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 					<nav class="link-effect-2" id="link-effect-2">
 						<ul class="nav navbar-nav">
-							<li class="active"><a href="{% url 'index' %}"><span data-hover="Principal">Principal</span></a></li>
+							<li class="active"><a href="{% url 'profile' %}"><span data-hover="Principal">Principal</span></a></li>
 							<li><a href=" "><span data-hover="Acerca de">Acerca de </span></a></li>
 							<li><a href="{% url 'uploads' %}"><span data-hover="Subir Archivo">Subir Archivo</span></a></li>
 							<li><a href="{% url 'download' %}"><span data-hover="Descargar Archivo">Descargar Archivo</span></a></li>
@@ -101,7 +101,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="services-breadcrumb">
 		<div class="container">
 			<ul>
-				<li><a href="{% url 'index' %}">Principal</a><i>|</i></li>
+				<li><a href="{% url 'profile' %}">Principal</a><i>|</i></li>
 				<li>Descargar Archivo</li>
 			</ul>
 		</div>
@@ -155,8 +155,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="col-md-2 w3agile_footer_grid">	
 				<h3>Links</h3>
 				<ul>
-					<li><a href="{% url 'index' %}">Principal</a></li>
+					<li><a href="{% url 'profile' %}">Principal</a></li>
 					<li><a href=" ">A cerca de</a></li>
+					<li><a href="{% url 'index' %}">Subir Archivo</a></li>
+					<li><a href="{% url 'uploads' %}">Descargar Archivo</a></li>
+					<li><a href="{% url 'download' %}">Eliminar Archivo</a></li>
 					<li><a href=" ">Contacto</a></li>
 				</ul>
 			</div>
