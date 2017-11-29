@@ -38,18 +38,18 @@ input[type="submit"],.header_left ul li a,.agile_back_home a,.agileits_social h5
 	-ms-transition: .5s ease-in;
 }
 .header {
-    background:#1ABC9C;
+    background:#2980b9;
 }
 .w3l_header_left{
 	float:left;
 }
 .w3l_header_left ul{
 	padding: 0em 0 0 1.5em;
-    border-left: 1px solid #0e947a;
+    border-left: 1px solid #2471a3;
 }
 .w3l_header_left ul li{
 	display: inline-block;
-       border-right: 1px solid #0e947a;
+       border-right: 1px solid #2471a3;
     color: #fff;
     padding: 1em 1.5em 1em 0;
 	letter-spacing: 1px;
@@ -57,8 +57,8 @@ input[type="submit"],.header_left ul li a,.agile_back_home a,.agileits_social h5
 .w3l_header_left ul li span{
     padding: .5em;
     margin-right: 1em;
-    border: 1px solid #ff4c4c;
-    background: #ff4c4c;
+    border: 1px solid #212f3d;
+    background: #212f3d;
 }
 .w3l_header_left ul li a{
 	color:#fff;
@@ -86,8 +86,8 @@ input[type="submit"],.header_left ul li a,.agile_back_home a,.agileits_social h5
 	display: block;
 }
 .w3l_header_right ul li a:hover{
-    background: #ff4c4c;
-    border-color: #ff4c4c;
+    background: #212f3d;
+    border-color: #212f3d;
 }
 .w3l_header_right ul li a span{
 	padding-right:1em;
@@ -105,12 +105,12 @@ input[type="submit"],.header_left ul li a,.agile_back_home a,.agileits_social h5
 .content-wrapper2 {
     position: relative;
 }
-	
+
 .wrapper2 {
 	display: block;
 	margin: 0 auto;
 }
-	
+
 .search-button2 {
 	display: block;
     position: absolute;
@@ -131,12 +131,12 @@ input[type="submit"],.header_left ul li a,.agile_back_home a,.agileits_social h5
 	height: 30px;
 	background: url(../images/search-icon.png) no-repeat 6px 7px;
 }
-	
+
 .search-button2 span img {
 	vertical-align: middle;
 	padding-top: 7px;
 }
-	
+
 .search-box2 {
 	display: none;
     position: absolute;
@@ -149,7 +149,7 @@ input[type="submit"],.header_left ul li a,.agile_back_home a,.agileits_social h5
     -moz-transform: rotate3d(1,0,0,90deg) translateZ(20px);
     -ms-transform: rotate3d(1,0,0,90deg) translateZ(20px);
     transform: rotate3d(1,0,0,90deg) translateZ(20px);
-    -o-transform: rotate3d(1,0,0,90deg) translateZ(20px);						
+    -o-transform: rotate3d(1,0,0,90deg) translateZ(20px);
 }
 
 .search-box2 input[type=search]{
@@ -166,7 +166,7 @@ input[type="submit"],.header_left ul li a,.agile_back_home a,.agileits_social h5
 	padding: 10px 20px;
     outline: none;
     font-size: 14px;
-    background: #ff4c4c;
+    background: #212f3d;
     color: #fff;
     border: 1px solid;
 	text-transform: uppercase;
@@ -179,7 +179,7 @@ input[type="submit"],.header_left ul li a,.agile_back_home a,.agileits_social h5
 .search-box2 input:focus{
 	outline: none;
 }
-		
+
 .search-box2 input[type=text]::-webkit-input-placeholder {
 	color:#212121;
 }
@@ -187,7 +187,7 @@ input[type="submit"],.header_left ul li a,.agile_back_home a,.agileits_social h5
 .search-box2 input[type=text]:-moz-placeholder {
 	color:#212121;
 }
-	
+
 .search-box2 img {
 	opacity: .5;
 	position: absolute;
@@ -227,13 +227,13 @@ input[type="submit"],.header_left ul li a,.agile_back_home a,.agileits_social h5
 }
 
 .hidden-search-box {
-	-webkit-transform:	rotate3d(1,0,0,90deg) 
+	-webkit-transform:	rotate3d(1,0,0,90deg)
 								translateZ(25px);
-	-moz-transform:	rotate3d(1,0,0,90deg) 
+	-moz-transform:	rotate3d(1,0,0,90deg)
 								translateZ(25px);
-	-ms-transform:	rotate3d(1,0,0,90deg) 
+	-ms-transform:	rotate3d(1,0,0,90deg)
 								translateZ(25px);
-	transform:	rotate3d(1,0,0,90deg) 
+	transform:	rotate3d(1,0,0,90deg)
 								translateZ(25px);
 }
 
@@ -281,12 +281,12 @@ input[type="submit"],.header_left ul li a,.agile_back_home a,.agileits_social h5
 	-moz-animation: hideBox 0.5s ease-in-out;
 	-ms-animation: hideBox 0.5s ease-in-out;
 }
-		
+
 @-webkit-keyframes showBox{
 	0% { -webkit-transform: rotate3d(1,0,0,0); }
 	100% { -webkit-transform: rotate3d(1,0,0,-90deg); }
 }
-		
+
 @-moz-keyframes showBox{
 	0% { -moz-transform: rotate3d(1,0,0,0); }
 	100% { -moz-transform: rotate3d(1,0,0,-90deg); }
@@ -297,19 +297,19 @@ input[type="submit"],.header_left ul li a,.agile_back_home a,.agileits_social h5
 	100% { -ms-transform: rotate3d(1,0,0,-90deg); }
 }
 
-		
+
 @-webkit-keyframes hideBox{
 	0% { -webkit-transform: rotate3d(1,0,0,-90deg); }
 	100% { -webkit-transform: rotate3d(1,0,0,0); }
 }
 
-		
+
 @-moz-keyframes hideBox{
 	0% { -moz-transform: rotate3d(1,0,0,-90deg); }
 	100% { -moz-transform: rotate3d(1,0,0,0); }
 }
 
-		
+
 @-ms-keyframes hideBox{
 	0% { -ms-transform: rotate3d(1,0,0,-90deg); }
 	100% { -ms-transform: rotate3d(1,0,0,0); }
@@ -328,7 +328,7 @@ input[type="submit"],.header_left ul li a,.agile_back_home a,.agileits_social h5
   transition: 0.3s;
 }
 .link-effect-2 a span::before {
-  color: #1abc9c;
+  color: #2980b9;
   position: absolute;
   top: 100%;
   content: attr(data-hover);
@@ -375,10 +375,10 @@ input[type="submit"],.header_left ul li a,.agile_back_home a,.agileits_social h5
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
     background: none;
-	color:#1abc9c;
+	color:#2980b9;
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-   color: #1abc9c;
+   color: #2980b9;
 }
 .navbar-nav > li > a {
     font-size: 14px;
@@ -388,7 +388,7 @@ input[type="submit"],.header_left ul li a,.agile_back_home a,.agileits_social h5
 }
 .navbar-brand span {
     display: block;
-    color: #ff4c4c;
+    color: #212f3d;
     line-height: 2px;
     font-size: 20px;
     font-weight: 100;
@@ -428,7 +428,7 @@ input[type="submit"],.header_left ul li a,.agile_back_home a,.agileits_social h5
 .agile_short_dropdown > li > a:hover{
     color: #fff;
     text-decoration: none;
-    background-color: #1abc9c;
+    background-color: #2980b9;
 }
 /*-- //header --*/
 /*-- banner --*/
@@ -440,12 +440,12 @@ input[type="submit"],.header_left ul li a,.agile_back_home a,.agileits_social h5
     margin: 0 auto;
     text-align: center;
 	position:relative;
-   
+
 }
 .banner img {
        margin: 0 auto;
     text-align: center;
-    border: 7px solid #44c7f4;
+    border: 7px solid #5499c7;
 }
 .slider-info p {
     font-size: 1.1em;
@@ -503,10 +503,10 @@ input[type="submit"],.header_left ul li a,.agile_back_home a,.agileits_social h5
   height: 10px;
   float: left;
   margin: 5px 5px;
-  background: rgb(26, 188, 156);
+  background: rgb(41, 128, 185);
   border-radius: 50%;
   cursor: pointer;
-  
+
     overflow: hidden;
 }
 
@@ -552,7 +552,7 @@ input[type="submit"],.header_left ul li a,.agile_back_home a,.agileits_social h5
 /*--//banner_info --*/
 .wthree_more a{
 	    padding: 10px 10px;
-    border: 1px solid #ff4c4c;
+    border: 1px solid #212f3d;
     font-size: 14px;
     text-transform: uppercase;
     text-decoration: none;
@@ -562,7 +562,7 @@ input[type="submit"],.header_left ul li a,.agile_back_home a,.agileits_social h5
     -webkit-backface-visibility: hidden;
     -moz-osx-font-smoothing: grayscale;
     display: block;
-    background: #ff4c4c;
+    background: #212f3d;
 }
 /* Wayra */
 .button--wayra {
@@ -582,7 +582,7 @@ input[type="submit"],.header_left ul li a,.agile_back_home a,.agileits_social h5
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: #1abc9c;
+	background: #2980b9;
 	z-index: -1;
 	-webkit-transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
 	transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
@@ -593,7 +593,7 @@ input[type="submit"],.header_left ul li a,.agile_back_home a,.agileits_social h5
 }
 .button--wayra:hover {
 	color: #fff;
-	border-color:#1abc9c;
+	border-color:#2980b9;
 }
 .button--wayra.button--inverted:hover {
 	color: #3f51b5;
@@ -601,7 +601,7 @@ input[type="submit"],.header_left ul li a,.agile_back_home a,.agileits_social h5
 }
 .button--wayra:hover::before {
 	opacity: 1;
-	background-color:#1abc9c;
+	background-color:#2980b9;
 	-webkit-transform: rotate3d(0, 0, 1, 0deg);
 	transform: rotate3d(0, 0, 1, 0deg);
 	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
@@ -685,7 +685,7 @@ input[type="submit"],.header_left ul li a,.agile_back_home a,.agileits_social h5
 .agile_text_box h3{
     text-transform: capitalize;
     font-size: 1.2em;
-    color: #1abc9c;
+    color: #2980b9;
     line-height: 1.5em;
     margin: 1em 0 .5em;
     font-weight: 300;
@@ -707,7 +707,7 @@ input[type="submit"],.header_left ul li a,.agile_back_home a,.agileits_social h5
 	-ms-text-shadow: 2px 2px 2px rgba(154, 150, 150, 0.8);
 }
 .banner_bottom_left p i {
-    color: #1abc9c;
+    color: #2980b9;
     display: block;
     margin: .5em 0 1em;
     letter-spacing: 6px;
@@ -742,7 +742,7 @@ input[type="submit"],.header_left ul li a,.agile_back_home a,.agileits_social h5
 }
 .banner_bottom_right .img_agile {
     position: relative;
-     border: 7px solid #1abc9c;
+     border: 7px solid #2980b9;
 }
 .banner_bottom_right .img_agile img {
     position: relative;
@@ -766,11 +766,11 @@ input[type="submit"],.header_left ul li a,.agile_back_home a,.agileits_social h5
     font-weight:300;
     text-transform: uppercase;
     margin: 0 auto;
-		text-shadow: 2px 2px 2px rgba(154, 150, 150, 0.8);
-	-webkit-text-shadow: 2px 2px 2px rgba(154, 150, 150, 0.8);
-	-moz-text-shadow: 2px 2px 2px rgba(154, 150, 150, 0.8);
-	-o-text-shadow: 2px 2px 2px rgba(154, 150, 150, 0.8);
-	-ms-text-shadow: 2px 2px 2px rgba(154, 150, 150, 0.8);
+		text-shadow: 2px 2px 2px rgba(97, 93, 93, 0.8);
+	-webkit-text-shadow: 2px 2px 2px rgba(97, 93, 93, 0.8);
+	-moz-text-shadow: 2px 2px 2px rgba(97, 93, 93, 0.8);
+	-o-text-shadow: 2px 2px 2px rgba(97, 93, 93, 0.8);
+	-ms-text-shadow: 2px 2px 2px rgba(97, 93, 93, 0.8);
 }
 .testimonials h3,.services h3{
 	 color:#fff;
@@ -778,7 +778,7 @@ input[type="submit"],.header_left ul li a,.agile_back_home a,.agileits_social h5
 /*-- testimonials --*/
 p.quia {
       text-align: center;
-    color: #1abc9c;
+    color: #2980b9;
     font-size: 1em !important;
     font-style: italic;
     margin: .5em 0 0 !important;
@@ -810,7 +810,7 @@ p.quia {
 	font-size:1em;
 }
 .w3_testimonials_grid p{
-	color:#1abc9c;
+	color:#2980b9;
 	line-height:1.8em;
 	margin: .5em 0 0;
 }
@@ -828,14 +828,14 @@ p.quia {
     padding-top: 6em;
 }
 .w3_testimonials_grid i.fa.fa-quote-left {
-    color: #1abc9c;
+    color: #2980b9;
     font-size: 2em;
 }
 /*-- //testimonials --*/
 /*-- services-bottom --*/
 .w3_agileits_services_bottom_r_grid{
     padding: 4em 4em 0;
-    background: #3be8b0;
+    background: #5499c7;
     min-height: 313px;
 }
 .w3_agileits_services_bottom_r_grid h4{
@@ -903,7 +903,7 @@ p.quia {
 .serve_info_agile {
     text-align: center;
     margin-top: 1em;
-	
+
 }
 .serve_info_agile p {
     color: #8b8b96;
@@ -932,13 +932,13 @@ p.quia {
     display: block;
     background-color: #000;
 	-webkit-transition: .5s all;
-	-moz-transition: .5s all; 
+	-moz-transition: .5s all;
 	transition: .5s all;
 }
 .news_w3l_agileinfo a img.img-responsive {
     opacity: .5;
 	-webkit-transition: .5s all;
-	-moz-transition: .5s all; 
+	-moz-transition: .5s all;
 	transition: .5s all;
 	width: 100%;
 }
@@ -948,16 +948,16 @@ p.quia {
 .news_w3l_agileinfo-mdl{
     margin: 4em 0;
 	position: relative;
-} 
+}
 .agile-news-w3grid-text{
     padding: 3em;
-    background: #fff; 
+    background: #fff;
     margin-left: -6em;
     margin-top: 5em;
     -webkit-box-shadow: 0px 0px 7px 0px #8e8e8e;
     -moz-box-shadow: 0px 0px 7px 0px #8e8e8e;
     box-shadow: 0px 0px 7px 0px #8e8e8e;
-} 
+}
 .news_w3l_agileinfo-mdl .agile-news-w3grid-text{
     margin: 5em 0 0;
     position: absolute;
@@ -973,7 +973,7 @@ p.quia {
 .news_w3l_agileinfo h4 a{
        color: #0e0e0e;
 	-webkit-transition:.5s all;
-	-moz-transition:.5s all; 
+	-moz-transition:.5s all;
 	transition:.5s all;
 }
 .news_w3l_agileinfo h4 a:hover{
@@ -981,7 +981,7 @@ p.quia {
 }
 .news_w3l_agileinfo h6 {
     font-size: 0.9em;
-    color: #1abc9c;
+    color: #2980b9;
     margin: 1.2em 0;
     font-weight: 400;
 }
@@ -990,16 +990,16 @@ p.quia {
     color: #343539;
 	margin-right: 1em;
 }
-.news_w3l_agileinfo h6 a:hover{ 
-       color: #1abc9c;
-} 
+.news_w3l_agileinfo h6 a:hover{
+       color: #2980b9;
+}
 .agile-news-w3grid-text i {
     color: #444;
 	margin-right:9px;
 }
 .agile-w3grid-img.news-img-right-info {
     float: right;
-} 
+}
 .news_w3l_agileinfo .img_agile img {
     position: relative;
     top:15px;
@@ -1018,7 +1018,7 @@ p.quia {
 }
 .news-img-right-info .img_agile {
     position: relative;
-    border: 7px solid #1abc9c;
+    border: 7px solid #2980b9;
 }
 /*-- //new --*/
 /*-- footer --*/
@@ -1040,7 +1040,7 @@ p.quia {
 	position:absolute;
 	bottom:0%;
 	left:0%;
-	background: #1abc9c;
+	background: #2980b9;
     width: 25%;
 	height:2px;
 }
@@ -1057,7 +1057,7 @@ p.quia {
 	  color: #999;
 }
 .w3agile_footer_grid ul li a:hover{
-	color: #1abc9c;
+	color: #2980b9;
 }
 .w3agile_footer_grid:nth-child(2) {
     padding-left: 4em;
@@ -1081,7 +1081,7 @@ ul.w3agile_footer_grid_list li span{
 }
 ul.w3agile_footer_grid_list li span i{
 	margin-right:10px;
-	color:#4cc2ff;
+	color:#7fb3d5;
 }
 .w3agile_footer_grid_left{
 	float:left;
@@ -1106,7 +1106,7 @@ ul.w3agile_footer_grid_list li span i{
 	line-height:1.8em;
 }
 .agileinfo_copy_right_left p a{
-	color: #1abc9c;
+	color: #2980b9;
 	text-decoration:none;
 }
 .agileinfo_copy_right_left p a:hover{
@@ -1172,7 +1172,7 @@ ul.social li{
   font-size: .7rem;
   line-height: 1;
   z-index: 1;
-  background:#1abc9c;
+  background:#2980b9;
   color: #fff;
 }
 .social .tooltip span:after {
@@ -1184,7 +1184,7 @@ ul.social li{
   left: 50%;
   margin-left: -8px;
   border: 8px solid transparent;
-  border-top-color: #1abc9c;
+  border-top-color: #2980b9;
 }
 .social i {
     position: relative;
@@ -1215,7 +1215,7 @@ ul.social li{
 	text-transform:uppercase;
 }
 .services-breadcrumb ul li a{
-	color:#1abc9c;
+	color:#2980b9;
 	text-decoration:none;
 }
 .services-breadcrumb ul li a:hover{
@@ -1230,7 +1230,7 @@ ul.social li{
 	text-align:center;
 }
 .w3l_services_grid1 span{
-	color:#1abc9c;
+	color:#2980b9;
 	font-size:1.5em;
 }
 .w3l_services_grid1 h4 a {
@@ -1244,7 +1244,7 @@ ul.social li{
     letter-spacing: 1px;
 }
 .w3l_services_grid1 h4 a:hover,.w3l_services_grid:hover .w3l_services_grid1 h4 a{
-	color:#1abc9c;
+	color:#2980b9;
 }
 .w3l_services_grid1 p{
 	color:#999;
@@ -1274,7 +1274,7 @@ ul.social li{
 }
 .w3ls_services_bottom_left_gridl h4 a{
 	font-size: 1.1em;
-    color: #1abc9c;
+    color: #2980b9;
     text-decoration: none;
     font-weight: 400;
     letter-spacing: 1px;
@@ -1290,7 +1290,7 @@ ul.social li{
 .w3ls_services_bottom_left_gridr1{
 	width: 60px;
     height: 60px;
-    background: #1abc9c;
+    background: #2980b9;
     border-radius: 65px;
     text-align: center;
     margin: 1.5em auto 0;
@@ -1311,7 +1311,7 @@ ul.social li{
 }
 .wthree_special_service_left h4 {
     margin: 1em 0 1em;
-    color: #1abc9c;
+    color: #2980b9;
     font-size: 1.3em;
     line-height: 1.5em;
     text-transform: capitalize;
@@ -1348,7 +1348,7 @@ ul.social li{
 	color:#212121;
 }
 .agile_about_grid_right p span{
-	color:#1abc9c;
+	color:#2980b9;
 }
 .wthree_more3 a {
 	margin:0 !important;
@@ -1369,7 +1369,7 @@ ul.social li{
 }
 .about_counter_left i{
     font-size:2em;
-	color:#1abc9c;
+	color:#2980b9;
 }
 .about_counter_left p{
 
@@ -1434,7 +1434,7 @@ ul.social li{
 	width: 0%;
     height: 4px;
     border-radius: 2px;
-    background: #1abc9c;
+    background: #2980b9;
     margin-bottom: 2em;
     -webkit-transition: width 1s;
     transition: width 1s;
@@ -1443,7 +1443,7 @@ ul.social li{
 	-moz-transition: width 1s;
 }
 .bar_group .elastic {
-	background: #1abc9c;
+	background: #2980b9;
     -webkit-transition-timing-function: cubic-bezier(0.5, 0.25, 0.375, 1.335);
     transition-timing-function: cubic-bezier(0.5, 0.25, 0.375, 1.335);
     -webkit-transition-duration: 1s;
@@ -1505,14 +1505,14 @@ li.list-group-item1 {
 .label {
   font-weight: 300 !important;
   border-radius:4px;
-}  
+}
 .grid_5{
 	background:none;
 	padding:2em 0;
 }
 .grid_5 h3, .grid_5 h2, .grid_5 h1, .grid_5 h4, .grid_5 h5, h3.hdg, h3.bars {
 	margin-bottom: 1em;
-    color:#1abc9c;
+    color:#2980b9;
 }
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
   border-top: none !important;
@@ -1730,7 +1730,7 @@ ul.bs-glyphicons-list li:hover span {
     -ms-transition: 0.5s all;
     -moz-transition: 0.5s all;
     cursor: pointer;
-} 
+}
 .icon-box:hover {
     background: #000;
 	transition:0.5s all;
@@ -1749,11 +1749,11 @@ ul.bs-glyphicons-list li:hover span {
     float: left;
     width: 12.5%;
     height: 115px;
-    padding: 10px; 
+    padding: 10px;
     line-height: 1.4;
-    text-align: center;  
+    text-align: center;
     font-size: 12px;
-    list-style-type: none;	
+    list-style-type: none;
 }
 .codes .bs-glyphicons .glyphicon {
     margin-top: 5px;
@@ -1771,7 +1771,7 @@ ul.bs-glyphicons-list li:hover span {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 	color: #777;
-} 
+}
 .codes .bs-glyphicons .glyphicon-class {
     display: block;
     text-align: center;
@@ -1779,7 +1779,7 @@ ul.bs-glyphicons-list li:hover span {
 }
 h3.icon-subheading {
     font-size: 25px;
-    color: #ff4c4c !important;
+    color: #212f3d !important;
     margin: 30px 0 15px;
     font-weight: 300;
 }
@@ -1827,7 +1827,7 @@ h3.agileits-icons-title {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 	color: #777;
-} 
+}
 .bs-glyphicons .glyphicon-class {
     display: block;
     text-align: center;
@@ -1916,7 +1916,7 @@ h3.agileits-icons-title {
 .wthree_contact_left h4 {
     text-transform: uppercase;
     font-size: 1.5em;
-    color: #1abc9c;
+    color: #2980b9;
     margin-bottom: 1.5em;
     font-weight: 300;
 }
@@ -1933,9 +1933,9 @@ h3.agileits-icons-title {
 	margin-bottom:1em;
 	color:#999;
 }
-.wthree_contact_left ul li span{ 
+.wthree_contact_left ul li span{
 	padding-right:1em;
-	color:#1abc9c;
+	color:#2980b9;
 }
 .wthree_contact_left ul li a{
 	color:#999;
@@ -1967,7 +1967,7 @@ h3.agileits-icons-title {
     padding: 12px 0;
     font-size: 16px;
     color: #fff;
-    background: #1abc9c;
+    background: #2980b9;
     width: 46.6%;
     border: none;
     text-transform: uppercase;
@@ -1984,7 +1984,7 @@ h3.agileits-icons-title {
 }
 .agileits_recent_posts h3,.agileits_twitter_posts h3,.agileits_tags h3{
 	font-size:1.3em;
-	color:#1abc9c;
+	color:#2980b9;
 	text-transform:uppercase;
 	margin-bottom:1.5em;
 }
@@ -2017,11 +2017,11 @@ h3.agileits-icons-title {
 	text-decoration:none;
 }
 .agileits_recent_posts_gridr ul li a:hover{
-	color:#1abc9c;
+	color:#2980b9;
 }
 .agileits_recent_posts_gridr ul li span{
 	padding-right:.5em;
-	color:#1abc9c;
+	color:#2980b9;
 }
 .agileits_recent_posts_grid:nth-child(3) {
     margin: 2em 0;
@@ -2041,10 +2041,10 @@ h3.agileits-icons-title {
 	text-decoration:none;
 }
 .agileits_twitter_posts ul li a:hover{
-	color:#1abc9c;
+	color:#2980b9;
 }
 .agileits_twitter_posts ul li i {
-    color: #4cc2ff;
+    color: #5499c7;
     margin-right: 0.6em;
 }
 .agileits_twitter_posts ul li span {
@@ -2066,7 +2066,7 @@ h3.agileits-icons-title {
 	text-decoration:none;
 }
 .agileits_tags ul li a:hover{
-	background:#1abc9c;
+	background:#2980b9;
 	color:#fff;
 }
 .w3_comments ul li{
@@ -2079,11 +2079,11 @@ h3.agileits-icons-title {
 	text-decoration:none;
 }
 .w3_comments ul li a:hover{
-	color:#1abc9c;
+	color:#2980b9;
 }
 .w3_comments ul li span{
 	padding-right:1em;
-	color:#1abc9c;
+	color:#2980b9;
 }
 .agile_single_right h3 {
     margin: 2em 0;
@@ -2091,7 +2091,7 @@ h3.agileits-icons-title {
     font-size: 1.2em;
     padding-left: 1.5em;
     line-height: 1.8em;
-    border-left: 6px solid #1abc9c;
+    border-left: 6px solid #2980b9;
 }
 .w3_comments_bottom img{
 	width:100%;
@@ -2113,7 +2113,7 @@ h3.agileits-icons-title {
 .agile_single_right_grid p span{
 	display:block;
 	margin:1em 0 0;
-	color:#1abc9c;
+	color:#2980b9;
 }
 .agile_single_right_grids_two_grid h4{
 	padding: 2em 2em 2em 2em;
@@ -2126,7 +2126,7 @@ h3.agileits-icons-title {
     margin: 2.5em 0 0;
 }
 .agile_single_right_grids_two_grid h4 i {
-    color: #ff4c4c;
+    color: #212f3d;
     margin-right: 1.2em;
     font-size: 1.4em;
 }
@@ -2159,7 +2159,7 @@ h3.agileits-icons-title {
 }
 .w3agile_grid_right h3 a {
     font-size: .8em;
-    color: #1abc9c;
+    color: #2980b9;
     margin: 0;
     text-decoration: none;
     font-weight: 400;
@@ -2188,7 +2188,7 @@ h3.agileits-icons-title {
     text-decoration: none;
 }
 .reply a:hover{
-    color: #ff4c4c;
+    color: #212f3d;
 }
 .comments-grid:nth-child(3) {
     margin:2em 0 0;
@@ -2212,7 +2212,7 @@ h3.agileits-icons-title {
 .agileinfo_write_reply input[type="submit"]{
 	outline: none;
     width: 30%;
-    background:#1abc9c;
+    background:#2980b9;
     padding: 10px 0;
     border: none;
     font-size: 1em;
@@ -2246,7 +2246,7 @@ h3.agileits-icons-title {
 	margin: .5em 0 0;
 }
 .login h3 a{
-	color:#1abc9c;
+	color:#2980b9;
 	text-decoration:none;
 }
 .login h3 a:hover{
@@ -2261,7 +2261,7 @@ h3.agileits-icons-title {
     font-size: 14px;
     color: #212121;
     padding: 10px;
-    border:1px solid #DADADA;
+    border:1px solid #17202a;
     width: 100%;
     -webkit-appearance: none;
     background: #f5f5f5;
@@ -2277,7 +2277,7 @@ h3.agileits-icons-title {
 }
 .w3agile_forgot h4 a{
 	font-size: .9em;
-    color: #1abc9c;
+    color: #2980b9;
     text-decoration: none;
     display: block;
     margin:.3em 0 0;
@@ -2343,7 +2343,7 @@ label.checkbox {
     margin: 1em 0 2em;
 }
 .login input[type="submit"] {
-    background: #1abc9c;
+    background: #2980b9;
     color: #FFF;
     font-size: 1em;
     padding:10px 0;
@@ -2362,7 +2362,7 @@ label.checkbox {
 }
 .agileits_social:before{
 	content: '';
-    background: #1abc9c;
+    background: #2980b9;
     height: 1px;
     width: 19%;
     position: absolute;
@@ -2376,7 +2376,7 @@ label.checkbox {
 	padding:2em 0 3em;
 }
 .agileits_social h5 a{
-	color:#1abc9c;
+	color:#2980b9;
 	text-decoration:none;
 }
 .agileits_social h5 a:hover{
@@ -2427,9 +2427,9 @@ label.checkbox {
     text-transform: uppercase;
 }
 .agile_back_home a:hover{
-	background:#1abc9c;
+	background:#2980b9;
 	color:#fff;
-	border-color:#1abc9c;
+	border-color:#2980b9;
 }
 /*-- //login --*/
 /*-- to-top --*/
@@ -2440,7 +2440,7 @@ label.checkbox {
 	bottom: 20px;
 	right: 2%;
 	overflow: hidden;
-	z-index: 999; 
+	z-index: 999;
 	width: 32px;
 	height: 32px;
 	border: none;
