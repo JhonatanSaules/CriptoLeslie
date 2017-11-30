@@ -15,7 +15,7 @@ from nube.Cliente import *
 from nube.Descargar import *
 from nube.Eliminar import *
 from criptoleslie import config
-from nube.forms import RegistrationForm, LoginForm, UploadForm, DownloadForm
+from nube.forms import RegistrationForm, LoginForm, UploadForm, DownloadForm, DeleteForm
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
 from django.contrib import messages
@@ -213,7 +213,7 @@ def delete(request):
     #nom_user = open("llaves_clientes/user.txt", "r").read()
 
     if request.method == 'POST':
-        form = DownloadForm(request.POST, request.FILES)
+        form = DeleteForm(request.POST, request.FILES)
         if form.is_valid():
             filename=request.POST['filename']
             print filename
@@ -225,7 +225,7 @@ def delete(request):
         else:
             messages.error(request, 'El archivo que deseas eliminar no existe')
     else:
-        form = DownloadForm()
+        form = DeleteForm()
     return render(request, 'nube/delete.html', {'form': form})
 
 

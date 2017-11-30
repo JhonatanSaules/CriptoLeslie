@@ -68,3 +68,6 @@ class UploadForm(forms.Form):
 
 class DownloadForm(forms.Form):
     filename = forms.CharField(max_length=100)
+
+class DeleteForm(forms.Form):
+    filename = forms.CharField(max_length=100)
