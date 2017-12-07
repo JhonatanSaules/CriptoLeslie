@@ -119,6 +119,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <h2>Estos son tus archivos {{ user.username }}</h2>
 
         <div class="jumbotron content">
+
+            <ul>
+                {% for file in match %}
+                <a href=/Cifrados/{{ user.username }}/{{ file }}>{{ file }}</a>
+                <br>
+                {% endfor %}
+
+            </ul>
+
+
+
             <div class="jumbotron content">
                 {#                    <select name="selCombo" size="1">#}
                 {##}

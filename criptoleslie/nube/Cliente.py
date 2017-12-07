@@ -6,7 +6,9 @@ import Crypto.Cipher.AES, Crypto.Util.Counter
 import hmac
 from rsagen import *
 from Duplicidad import *
+from models import Document
 from django.core.files import File
+from time import time
 
 #va a mandar mensajes al servidor
 def subir_arch(filename,nom_user):
@@ -26,18 +28,21 @@ def subir_arch(filename,nom_user):
     
     print "Ingrese salir para terminar"
     while mensaje != "salir":
-    	#generamos un numero aleatorio que este dentro de N
+        tiempo_inicial_cifrar = time()
+        #generamos un numero aleatorio que este dentro de N
         r = randint(0,n)
         ##Mandamos la ruta del archivo que se va a realizar el hash, a un archivo .txt para que pueda ser utiilizado por la aplicacion
-        rutaAr = open("RutaArchivo.txt","wb")
-        rutaAr.write(filename)
-        rutaAr.close()
+        # rutaAr = open("RutaArchivo.txt","wb")
+        # rutaAr.write(filename)
+        # rutaAr.close()
         print "usuario: "+nom_user
         ##Almacenamos el contenido del arcvhivo que se eligio desde el dialogo
         print(filename)
-        filename="static/media/documents/"+filename
-        print(filename)
-        m = str(open(filename, "rb").read())
+        voto_id = Document.objects.latest('id')
+        m=File(voto_id.docfile).read()
+        # filename="static/media/documents/"+filename
+        # print(filename)
+        # m = str(open(filename, "rb").read())
         #realizamos un hash del archivo 
         h = int(hashlib.sha256(m).hexdigest(), 16)
         print "h(m): ", h
@@ -136,6 +141,11 @@ def subir_arch(filename,nom_user):
         print ""
         print "Mensaje Cifrado... C2 "
 
+        tiempo_final_cifrar = time()
+        tiempo_ejecucion_cifrar = tiempo_final_cifrar - tiempo_inicial_cifrar
+
+        print 'El tiempo de ejecucion al cifrar el archivo fue: ', tiempo_ejecucion_cifrar  # En segundos
+
         hc1 = hashlib.sha256(fc1).hexdigest()[:16]
         fc2 = str(ctext)
         deduplication(hc1,nom_user,filename2,fc1,fc2)
@@ -151,6 +161,8 @@ def subir_arch(filename,nom_user):
         #         mensaje="salir"
         #
         mensaje="salir"
+
+
 
 
 

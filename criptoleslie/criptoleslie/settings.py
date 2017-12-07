@@ -25,7 +25,7 @@ SECRET_KEY = '+7clhx5)w+z-x(-4&h$^!jgoex^tcws3fxg26lbc!u#!ytz(!$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1','192.168.0.100']
 
 
 # Application definition
@@ -101,6 +101,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '/home/jhonatan/PycharmProjects/CriptoLeslie/criptoleslie/nube/static/'
 
 #ruta donde guardaremos los archivos de media
 MEDIA_URL = '/media/'

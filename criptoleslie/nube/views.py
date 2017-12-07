@@ -19,6 +19,9 @@ from nube.forms import RegistrationForm, LoginForm, UploadForm, DownloadForm, De
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
 from django.contrib import messages
+from models import Cipher
+from time import time
+
 
 class LoginView(FormView):
     template_name = 'nube/login.html'
@@ -162,10 +165,12 @@ def upload_file(request):
     if request.method == 'POST':
         form = UploadForm(request.POST, request.FILES)
         if form.is_valid():
-            palabra2 = str(request.FILES['docfile'])
+            # palabra2 = str(request.FILES['docfile'])
+            # print palabra2
+            # palabra2.count(' ')
+            # palabra = palabra2.replace(" ","_")
+            # print palabra
             newdoc = Document(docfile=request.FILES['docfile'])
-            newdoc.save(form)
-
             #palabra = newdoc.docfile.name
             #print "nombre: "+palabra
             #palabra1 = palabra.split('/')
@@ -175,10 +180,30 @@ def upload_file(request):
             #for i in range(0, tamano):
                 #print "Numero: ", i, palabra1[i]
             #palabra2 = palabra1[1]
-            print "Ultima palabra: ", palabra2
+            #print "Ultima palabra: ", palabra
+            filen = str(newdoc.docfile.name)
+            bandera = 0
+            i=1
+            while bandera == 0:
+                try:
+                    buscar = Cipher.objects.filter(filename=filen).all()[0]
+                    filen=i+"_"+filen
+                    print "try"
+                    print filen
+                except:
+                    print "except"
+                    bandera = 1
+                    print filen
+                i=i+1
+            print "filen : "+filen
+            newdoc.save(form)
             nom_user = str(request.user)
             #nom_user = open("llaves_clientes/user.txt", "r").read()
-            subir_arch(palabra2,str(nom_user))
+            tiempo_inicial_subir = time()
+            subir_arch(filen,str(nom_user))
+            tiempo_final_subir = time()
+            tiempo_ejecucion_subir = tiempo_final_subir - tiempo_inicial_subir
+            print 'El tiempo de ejecucion al subir el archivo fue: ', tiempo_ejecucion_subir  # En segundos
             #messages.success(request, 'Archivo Almacenado con exito')
             return redirect("profile")
     else:
@@ -200,7 +225,11 @@ def download(request):
             print filename
             nom_user = str(request.user)
             #nom_user = open("llaves_clientes/user.txt", "r").read()
+            tiempo_inicial_bajar = time()
             descargar_archivo(filename,nom_user)
+            tiempo_final_bajar = time()
+            tiempo_ejecucion_bajar = tiempo_final_bajar - tiempo_inicial_bajar
+            print 'El tiempo de ejecucion al descargar el archivo fue: ', tiempo_ejecucion_bajar  # En segundos
             messages.success(request, 'Archivo Descargado con exito')
             return redirect("download")
         else:
